@@ -17,10 +17,6 @@
             padding: 20px;
             color: white;
         }
-        .top-section img {
-            max-width: 100%;
-            height: auto;
-        }
         .main-content {
             background: white;
             padding: 20px;
@@ -28,22 +24,32 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .main-content img {
+            max-width: 50%; /* Reduce image size to half */
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
         h1 span {
             color: #BF1E3D;
             font-weight: bold;
         }
         .steps {
-            text-align: left;
+            text-align: center;
             max-width: 400px;
             margin: 0 auto;
         }
         .steps ol {
-            padding-left: 20px;
+            padding-left: 0;
+            list-style-position: inside;
         }
         .steps ol li {
             font-size: 18px;
             margin: 10px 0;
-            color: #BF1E3D;
+            color: #000000;
+        }
+        .steps ol li::marker {
+            color: #BF1E3D; /* Color only the numbers */
             font-weight: bold;
         }
         .cta-btn {
@@ -52,33 +58,73 @@
             color: white;
             padding: 12px 20px;
             font-size: 18px;
+            font-weight: bold;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
+            display: none; /* Initially hidden */
         }
         .cta-btn:hover {
             background: #a81732;
         }
+        .location-section {
+            margin-top: 20px;
+        }
+        .location-btn {
+            display: block;
+            width: 90%; /* Extend close to edges */
+            margin: 10px auto;
+            background: #BF1E3D;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .location-btn:hover {
+            background: #a81732;
+        }
+        .thank-you {
+            display: none;
+            margin-top: 20px;
+        }
     </style>
+    <script>
+        function showThankYou() {
+            document.querySelector('.location-section').style.display = 'none';
+            document.querySelector('.thank-you').style.display = 'block';
+            document.querySelector('.cta-btn').style.display = 'inline-block';
+        }
+    </script>
 </head>
 <body>
-    <div class="top-section">
-        <img src="cash-valentines-card.png" alt="Cash Gift Card Image">
-    </div>
+    <div class="top-section"></div> <!-- Only colored section, image moved below -->
     
     <div class="main-content">
-        <h1>Claim Your <span>$750 Cash Gift Card!</span></h1>
-        <p>Follow these simple steps to claim your reward:</p>
+        <img src="cash-valentines-card.png" alt="Cash Gift Card Image">
+        <h1>Follow the steps to get your <span>$750 Cash Giftcard!</span></h1>
         
         <div class="steps">
             <ol>
-                <li>Sign up for the offer</li>
-                <li>Complete the required steps</li>
-                <li>Receive your $750 cash gift card!</li>
+                <li>Choose your location below to continue📍</li>
+                <li>Enter your email & basic info✍️</li>
+                <li>Complete recommended deals (Important)🚨</li>
+                <li>Claim your reward!💸</li>
             </ol>
         </div>
         
-        <a href="https://glstrck.com/aff_c?offer_id=1776&aff_id=27696" class="cta-btn">CLAIM NOW!</a>
+        <div class="location-section">
+            <h2>Where Are You Located?</h2>
+            <button class="location-btn" onclick="showThankYou()">United States</button>
+            <button class="location-btn" onclick="showThankYou()">Canada</button>
+        </div>
+        
+        <div class="thank-you">
+            <h2>Thank you! Click below to claim your reward.</h2>
+            <a href="https://glstrck.com/aff_c?offer_id=1776&aff_id=27696" class="cta-btn">CLAIM NOW!</a>
+        </div>
     </div>
 </body>
 </html>
