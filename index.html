@@ -25,7 +25,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .main-content img {
-            max-width: 50%; /* Reduce image size to half */
+            max-width: 50%;
             height: auto;
             display: block;
             margin: 20px auto;
@@ -49,20 +49,21 @@
             color: #000000;
         }
         .steps ol li::marker {
-            color: #BF1E3D; /* Color only the numbers */
+            color: #BF1E3D;
             font-weight: bold;
         }
         .cta-btn {
-            display: inline-block;
+            display: none;
+            width: 90%;
+            margin: 10px auto;
             background: #BF1E3D;
-            color: white;
-            padding: 12px 20px;
-            font-size: 18px;
+            color: #FFFFFF;
+            font-size: 20px;
             font-weight: bold;
-            text-decoration: none;
+            padding: 15px;
+            border: none;
             border-radius: 5px;
-            margin-top: 20px;
-            display: none; /* Initially hidden */
+            cursor: pointer;
         }
         .cta-btn:hover {
             background: #a81732;
@@ -72,7 +73,7 @@
         }
         .location-btn {
             display: block;
-            width: 90%; /* Extend close to edges */
+            width: 90%;
             margin: 10px auto;
             background: #BF1E3D;
             color: #FFFFFF;
@@ -89,18 +90,36 @@
         .thank-you {
             display: none;
             margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #ffffff;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
+        .footer hr {
+            width: 90%;
+            border: 1px solid black;
+            margin: 20px auto;
         }
     </style>
     <script>
         function showThankYou() {
             document.querySelector('.location-section').style.display = 'none';
             document.querySelector('.thank-you').style.display = 'block';
-            document.querySelector('.cta-btn').style.display = 'inline-block';
+            document.querySelector('.cta-btn').style.display = 'block';
         }
     </script>
 </head>
 <body>
-    <div class="top-section"></div> <!-- Only colored section, image moved below -->
+    <div class="top-section"></div>
     
     <div class="main-content">
         <img src="cash-valentines-card.png" alt="Cash Gift Card Image">
@@ -125,6 +144,11 @@
             <h2>Thank you! Click below to claim your reward.</h2>
             <a href="https://glstrck.com/aff_c?offer_id=1776&aff_id=27696" class="cta-btn">CLAIM NOW!</a>
         </div>
+    </div>
+
+    <div class="footer">
+        <hr>
+        <p>This site is owned and operated by Uplevel Rewards. All content, offers, and rewards provided herein are managed by Uplevel Rewards. Please contact us with any questions or concerns regarding the site or its content.</p>
     </div>
 </body>
 </html>
