@@ -14,7 +14,7 @@
         }
         .top-section {
             background-color: #004d26;
-            padding: 20px;
+            padding: 15px;
             color: white;
         }
         .main-content {
@@ -25,7 +25,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .main-content img {
-            max-width: 55%;
+            max-width: 60%;
             height: auto;
             display: block;
             margin: 10px auto;
@@ -34,40 +34,17 @@
             color: #004d26;
             font-weight: bold;
         }
-        .location-section {
-            margin-top: 10px;
-        }
-        .location-btn {
-            display: block;
-            width: 90%;
-            margin: 5px auto;
-            background: #000000;
-            color: #FFFFFF;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .location-btn:hover {
-            background: #222222;
-        }
         .steps {
             text-align: center;
             max-width: 400px;
-            margin: 10px auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin: 5px auto;
         }
         .steps ol {
             padding-left: 0;
             list-style-position: inside;
-            font-size: 16px;
         }
         .steps ol li {
+            font-size: 16px;
             margin: 5px 0;
             color: #000000;
         }
@@ -92,6 +69,26 @@
         .cta-btn:hover {
             background: #222222;
         }
+        .location-section {
+            margin-top: 10px;
+        }
+        .location-btn {
+            display: block;
+            width: 90%;
+            margin: 5px auto;
+            background: #000000;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .location-btn:hover {
+            background: #222222;
+        }
         .thank-you {
             display: none;
             margin-top: 10px;
@@ -103,7 +100,7 @@
         }
         .footer {
             margin-top: 20px;
-            padding: 15px;
+            padding: 10px;
             background: #ffffff;
             text-align: center;
             font-size: 12px;
@@ -112,7 +109,7 @@
         .footer hr {
             width: 90%;
             border: 1px solid black;
-            margin: 15px auto;
+            margin: 10px auto;
         }
     </style>
     <script>
@@ -128,13 +125,6 @@
     
     <div class="main-content">
         <img src="cash750.png" alt="Cash Gift Card Image"> 
-        
-        <div class="location-section">
-            <h2>Where Are You Located?</h2>
-            <button class="location-btn" onclick="showThankYou()">United States</button>
-            <button class="location-btn" onclick="showThankYou()">Canada</button>
-        </div>
-        
         <h1>Follow the steps to get your <span>$750 Cash Giftcard!</span></h1>
         
         <div class="steps">
@@ -144,6 +134,12 @@
                 <li>Complete recommended deals (Important)🚨</li>
                 <li>Claim your reward!💸</li>
             </ol>
+        </div>
+        
+        <div class="location-section">
+            <h2>Where Are You Located?</h2>
+            <button class="location-btn" onclick="showThankYou()">United States</button>
+            <button class="location-btn" onclick="showThankYou()">Canada</button>
         </div>
         
         <div class="thank-you">
