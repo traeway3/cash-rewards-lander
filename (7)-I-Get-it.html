@@ -18,7 +18,9 @@
         .top-section {
             background: url('Cash Background (1).png') no-repeat center center;
             background-size: cover;
-            padding: 35px;
+            width: 100%;
+            height: auto;
+            padding: 35px 0;
             position: relative;
         }
         .card-image {
@@ -32,8 +34,11 @@
         .main-content {
             background: transparent;
             padding: 10px;
-            margin: 10px;
-            border-radius: 10px;
+            margin: 0 auto;
+            max-width: 90%;
+        }
+        h1 {
+            text-align: center;
         }
         h1 span {
             color: #00A967;
@@ -47,6 +52,7 @@
         .steps ol {
             padding-left: 0;
             list-style-position: inside;
+            text-align: center;
         }
         .steps ol li {
             font-size: 18px;
@@ -54,6 +60,8 @@
             margin: 5px 0;
             color: #000000;
             white-space: nowrap;
+            display: inline-block;
+            width: 100%;
         }
         .steps ol li::marker {
             color: #00A967;
@@ -78,6 +86,7 @@
         }
         .location-section {
             margin-top: 5px;
+            text-align: center;
         }
         .location-btn {
             display: block;
