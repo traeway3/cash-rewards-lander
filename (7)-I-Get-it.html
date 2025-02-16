@@ -68,33 +68,19 @@
             color: #00A967;
             font-weight: bold;
         }
-        .cta-btn {
-            display: none;
-            width: 98%;
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
             max-width: 400px;
-            margin: 5px auto;
-            background: #00A967;
-            color: #FFFFFF;
-            font-size: 22px;
-            font-weight: bold;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
+            margin: 0 auto;
         }
-        .cta-btn:hover {
-            background: #008a52;
-        }
-        .location-section {
-            margin-top: 5px;
-            text-align: center;
-        }
-        .location-btn {
+        .location-btn, .cta-btn {
             display: block;
             width: 98%;
             max-width: 400px;
-            margin: 5px auto;
             background: #00A967;
             color: #FFFFFF;
             font-size: 22px;
@@ -104,9 +90,13 @@
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
+            text-align: center;
         }
-        .location-btn:hover {
+        .location-btn:hover, .cta-btn:hover {
             background: #008a52;
+        }
+        .cta-btn {
+            display: none;
         }
         .thank-you {
             display: none;
@@ -157,13 +147,13 @@
             </ol>
         </div>
         
-        <div class="location-section">
+        <div class="location-section button-container">
             <h2>Where Are You Located?</h2>
             <button class="location-btn" onclick="showThankYou()">United States</button>
             <button class="location-btn" onclick="showThankYou()">Canada</button>
         </div>
         
-        <div class="thank-you">
+        <div class="thank-you button-container">
             <h2>Thank you! Click below to claim your reward.</h2>
             <a href="https://glstrck.com/aff_c?offer_id=1145&aff_id=27696&source=7-I-Get-it" class="cta-btn">CLAIM NOW!</a>
         </div>
