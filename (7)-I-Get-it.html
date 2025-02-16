@@ -14,14 +14,11 @@
             padding: 0;
             background-color: #FFFFFF;
             overflow-x: hidden;
-            width: 100vw;
         }
         .top-section {
             background: url('Cash Background (1).png') no-repeat center center;
             background-size: cover;
-            width: 100vw;
-            height: auto;
-            padding: 35px 0;
+            padding: 35px;
             position: relative;
         }
         .card-image {
@@ -35,11 +32,9 @@
         .main-content {
             background: transparent;
             padding: 10px;
-            margin: 0 auto;
-            max-width: 90%;
-        }
-        h1 {
-            text-align: center;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: none;
         }
         h1 span {
             color: #00A967;
@@ -53,50 +48,54 @@
         .steps ol {
             padding-left: 0;
             list-style-position: inside;
-            text-align: center;
         }
         .steps ol li {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 700;
             margin: 5px 0;
             color: #000000;
             white-space: nowrap;
-            display: block;
-            width: 100%;
         }
         .steps ol li::marker {
             color: #00A967;
             font-weight: bold;
         }
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        .location-btn, .cta-btn {
-            display: block;
-            width: 100%;
-            max-width: 400px;
+        .cta-btn {
+            display: none;
+            width: 95%;
+            margin: 5px auto;
             background: #00A967;
             color: #FFFFFF;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
-            padding: 15px;
+            padding: 12px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
-            text-align: center;
         }
-        .location-btn:hover, .cta-btn:hover {
+        .cta-btn:hover {
             background: #008a52;
         }
-        .cta-btn {
-            display: none;
+        .location-section {
+            margin-top: 5px;
+        }
+        .location-btn {
+            display: block;
+            width: 95%;
+            margin: 5px auto;
+            background: #00A967;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .location-btn:hover {
+            background: #008a52;
         }
         .thank-you {
             display: none;
@@ -125,7 +124,8 @@
     <script>
         function showThankYou() {
             document.querySelector('.location-section').style.display = 'none';
-            document.querySelector('.thank-you').style.display = 'flex';
+            document.querySelector('.thank-you').style.display = 'block';
+            document.querySelector('.cta-btn').style.display = 'block';
         }
     </script>
 </head>
@@ -139,20 +139,20 @@
         
         <div class="steps">
             <ol>
-                <li>1. Choose your location below to continue📍</li>
-                <li>2. Enter your email & basic info✍️</li>
-                <li>3. Complete 3-5 deals (IMPORTANT)🚨</li>
-                <li>4. Claim your reward!💸</li>
+                <li>Choose your location below to continue📍</li>
+                <li>Enter your email & basic info✍️</li>
+                <li>Complete 3-5 deals (IMPORTANT)🚨</li>
+                <li>Claim your reward!💸</li>
             </ol>
         </div>
         
-        <div class="location-section button-container">
+        <div class="location-section">
             <h2>Where Are You Located?</h2>
             <button class="location-btn" onclick="showThankYou()">United States</button>
             <button class="location-btn" onclick="showThankYou()">Canada</button>
         </div>
         
-        <div class="thank-you button-container">
+        <div class="thank-you">
             <h2>Thank you! Click below to claim your reward.</h2>
             <a href="https://glstrck.com/aff_c?offer_id=1145&aff_id=27696&source=7-I-Get-it" class="cta-btn">CLAIM NOW!</a>
         </div>
