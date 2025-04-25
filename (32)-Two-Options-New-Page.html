@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claim Your $1000 Cash Gift Card!</title>
+  <title>Claim Your $1000 Cash Gift Card</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
     body { font-family: 'Canva Sans', sans-serif; text-align: center; margin: 0; padding: 0; background: #FFFFFF; overflow-x: hidden; }
     .top-section { background: url('(16) Landing Page Background.png') no-repeat center center; background-size: cover; width: 100vw; padding: 30px 0; }
     .card-image { max-width: 50%; height: auto; display: block; margin: 0 auto; }
     .main-content { padding: 10px; max-width: 90%; margin: 0 auto; }
-    h1 { font-size: 24px; margin-bottom: 20px; }
-    h1 span { color: #7cc20c; font-weight: bold; }
-    .steps { max-width: 400px; margin: 0 auto 20px; }
+    .title-block { margin-bottom: 20px; }
+    #animatedAmount { font-size: 36px; font-weight: bold; color: #7cc20c; }
+    .subtitle { font-size: 18px; color: #000; margin-top: 8px; }
+    .steps { max-width: 400px; margin: 20px auto; }
     .steps ol { list-style-position: inside; padding-left: 0; }
     .steps ol li { font-size: 16px; font-weight: 700; margin: 8px 0; color: #000; }
     .steps ol li::marker { color: #7cc20c; font-weight: bold; }
-    .location-section { margin-bottom: 20px; }
+    .location-section, .thank-you { margin-bottom: 20px; }
     .location-btn, .cta-btn { display: block; width: 90%; margin: 10px auto; padding: 14px; font-size: 22px; font-weight: bold; color: #FFF; background: #7cc20c; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }
     .location-btn:hover, .cta-btn:hover { background: #65a208; }
     .thank-you { display: none; animation: fadeIn 0.5s ease-in-out; }
@@ -30,10 +31,10 @@
     <img src="$1000 Cash Card Spring.png" alt="Cash Gift Card Image" class="card-image" />
   </div>
   <div class="main-content">
-    <h1>
-      Follow the steps to get your&nbsp;
-      <span id="animatedAmount">$0.00</span>&nbsp;deposited to you
-    </h1>
+    <div class="title-block">
+      <div id="animatedAmount">$0.00</div>
+      <div class="subtitle">deposited to you</div>
+    </div>
     <div class="steps">
       <ol>
         <li>Choose your location below to continue</li>
@@ -49,16 +50,14 @@
     </div>
     <div class="thank-you">
       <h2>Thank you! Click below to start earning👇</h2>
-      <a href="https://glstrck.com/aff_c?offer_id=313&aff_id=27696&source=32-Two-Options" class="cta-btn">CLAIM NOW!</a>
+      <a href="https://glstrck.com/aff_c?offer_id=313&aff_id=27696&source=32-Two-Options-New-Page" class="cta-btn">CLAIM NOW!</a>
     </div>
   </div>
   <div class="footer">
     <hr />
     <p>Please make sure you follow the rules and guidelines mentioned so you can redeem your reward.</p>
   </div>
-
   <script>
-    // Number count-up animation
     document.addEventListener('DOMContentLoaded', () => {
       const el = document.getElementById('animatedAmount');
       const duration = 3000;
@@ -71,12 +70,9 @@
         const progress = frame / totalFrames;
         const currentAmount = countTo * progress;
         el.textContent = '$' + currentAmount.toFixed(2);
-        if (frame === totalFrames) {
-          clearInterval(counter);
-        }
+        if (frame === totalFrames) clearInterval(counter);
       }, 1000 / frameRate);
     });
-
     function showThankYou() {
       document.querySelector('.location-section').style.display = 'none';
       document.querySelector('.thank-you').style.display = 'block';
