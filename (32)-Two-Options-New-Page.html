@@ -7,28 +7,42 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
     body { font-family: 'Canva Sans', sans-serif; text-align: center; margin: 0; padding: 0; background: #FFFFFF; overflow-x: hidden; }
-    .top-section { width: 100%; padding: 30px 0; }
-    .card-image { max-width: 50%; height: auto; display: block; margin: 0 auto 8px; }
+    .top-section { width: 100%; padding: 20px 0; }
+    .card-image { max-width: 50%; height: auto; display: block; margin: 0 auto 4px; }
     .main-content { padding: 10px; max-width: 90%; margin: 0 auto; }
-    .cash-balance { font-size: 28px; color: #01D633; font-weight: bold; margin: 8px 0; }
-    .verified-badge { font-size: 14px; color: #555; display: flex; align-items: center; justify-content: center; gap: 6px; margin: 0 auto 16px; }
-    .verified-badge strong { font-weight: bold; color: #000; }
-    .checkmark { color: #01A2F7; font-size: 16px; }
-    .divider { border: none; height: 2px; background-color: #D5FFD5; width: 90%; margin: 16px auto; }
+
+    /* Cash Balance Title */
+    .cash-balance { font-size: 28px; color: #01D633; font-weight: bold; margin: 4px 0; }
+
+    /* Verified Badge Image */
+    .verified-image { display: block; margin: 4px auto 12px; width: auto; height: 24px; }
+
+    /* Divider */
+    .divider { border: none; height: 2px; background-color: #D5FFD5; width: 95%; margin: 12px auto; }
+
+    /* Animated Amount */
     .title-block { margin-bottom: 20px; }
     #animatedAmount { font-size: 36px; font-weight: bold; color: #01D633; }
     .subtitle { font-size: 18px; color: #000; font-weight: 700; margin-top: 8px; }
+
+    /* Steps */
     .steps { max-width: 400px; margin: 20px auto; }
     .steps ol { list-style-position: inside; padding-left: 0; }
     .steps ol li { font-size: 16px; font-weight: 700; margin: 8px 0; color: #000; }
     .steps ol li::marker { color: #01D633; font-weight: bold; }
+
+    /* Buttons */
     .location-section, .thank-you { margin-bottom: 20px; }
     .location-btn, .cta-btn { display: block; width: 90%; margin: 10px auto; padding: 14px; font-size: 22px; font-weight: bold; color: #FFF; background: #01D633; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }
     .location-btn:hover, .cta-btn:hover { background: #019f2b; }
-    .thank-you { display: none; animation: fadeIn 0.5s ease-in-out; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+
+    /* Footer */
     .footer { margin-top: 50px; padding: 5px; background: #fff; text-align: center; font-size: 14px; font-weight: bold; color: #333; }
     .footer hr { width: 90%; border: 1px solid #000; margin: 20px auto; }
+
+    /* Animation */
+    .thank-you { display: none; animation: fadeIn 0.5s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
   </style>
 </head>
 <body>
@@ -37,7 +51,7 @@
   </div>
   <div class="main-content">
     <h2 class="cash-balance">Cash Balance</h2>
-    <div class="verified-badge">Verified by <strong>TikTok</strong><span class="checkmark">&#10004;</span></div>
+    <img src="ttvf.png" alt="Verified by TikTok badge" class="verified-image" />
     <hr class="divider" />
     <div class="title-block">
       <div id="animatedAmount">$0.00</div>
