@@ -33,7 +33,7 @@
     .steps ol { list-style: none; padding: 0; text-align: left; margin: 0 auto; }
     .steps li { display: flex; align-items: center; justify-content: center; margin: 8px 0; font-size: 16px; font-weight: 700; color: #000; }
     .step-number { background: #01D633; color: #000; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 8px; font-size: 16px; font-weight: bold; }
-    .underlined { text-decoration: underline; text-decoration-color: #01D633; }
+    .underlined { border-bottom: 2px solid #01D633; }
 
     /* Buttons */
     .location-section, .thank-you { margin-bottom: 20px; }
@@ -41,12 +41,11 @@
     .location-btn:hover, .cta-btn:hover { background: #019f2b; }
 
     /* Footer */
-    .footer { margin-top: 50px; padding: 5px; background: #fff; text-align: center; font-size: 14px; font-weight: bold; color: #333; }
+    .footer { margin-top: 50px; padding: 5px; background: #fff; text-align: center; font-size: 14px; font-weight: bold; color: #333; position: relative; }
     .footer hr { width: 90%; border: 1px solid #000; margin: 20px auto; }
-
-    /* Policy Links (fixed) */
-    .policy-links { position: fixed; bottom: 40px; right: 8px; display: flex; flex-direction: column; gap: 4px; }
-    .policy-links a { color: #000; font-size: 10px; text-decoration: none; opacity: 0.6; }
+    /* Policy Links under footer, scrolls normally */
+    .policy-links { width: 90%; margin: 8px auto 0; text-align: right; }
+    .policy-links a { color: #000; font-size: 10px; text-decoration: none; opacity: 0.6; display: block; margin: 2px 0; }
 
     /* Reveal effect */
     .thank-you { display: none; animation: fadeIn 0.5s ease-in-out; }
@@ -86,18 +85,12 @@
   <div class="footer">
     <hr />
     <p>Please make sure you follow the rules and guidelines mentioned so you can redeem your reward.</p>
-  </div>
-  <div class="policy-links">
-    <a href="https://contact.uplevelrewards.com/policies/privacy?utm_source=footer-partial" target="_blank">Privacy Policy</a>
-    <a href="https://contact.uplevelrewards.com/policies/terms?utm_source=footer-partial" target="_blank">Terms & Conditions</a>
+    <div class="policy-links">
+      <a href="https://contact.uplevelrewards.com/policies/privacy?utm_source=footer-partial" target="_blank">Privacy Policy</a>
+      <a href="https://contact.uplevelrewards.com/policies/terms?utm_source=footer-partial" target="_blank">Terms & Conditions</a>
+    </div>
   </div>
   <script>
-    // Disable selection and context menu
-    document.addEventListener('selectstart', e => e.preventDefault());
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('dragstart', e => e.preventDefault());
-    
-    // Smooth counter
     document.addEventListener('DOMContentLoaded', () => {
       const el = document.getElementById('animatedAmount');
       const duration = 3000;
@@ -110,7 +103,6 @@
         if (count >= countTo) clearInterval(timer);
       }, intervalTime);
     });
-    
     function showThankYou() {
       document.querySelector('.location-section').style.display = 'none';
       document.querySelector('.thank-you').style.display = 'block';
