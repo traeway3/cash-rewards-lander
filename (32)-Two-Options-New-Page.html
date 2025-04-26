@@ -6,7 +6,7 @@
   <title>Claim Your $1000 Cash Gift Card</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
-    body { font-family: 'Canva Sans', sans-serif; text-align: center; margin: 0; padding: 0; background: #FFFFFF; }
+    body { font-family: 'Canva Sans', sans-serif; text-align: center; margin: 0; padding: 0; background: #FFFFFF; position: relative; }
     .top-section { padding: 16px 0 4px; }
     .card-image { max-width: 50%; height: auto; margin: 0 auto 2px; display: block; }
     .main-content { padding: 10px; max-width: 90%; margin: 0 auto; }
@@ -15,7 +15,7 @@
     .cash-balance { font-size: 28px; color: #01D633; font-weight: bold; margin: 2px 0; }
 
     /* Verified Badge Image */
-    .verified-image { display: block; margin: 2px auto 8px; height: 32px; width: auto; }
+    .verified-image { display: block; margin: 2px auto 8px; height: 24px; width: auto; }
 
     /* Divider */
     .divider { height: 3px; background-color: #D5FFD5; width: 98%; margin: 8px auto; border: none; }
@@ -37,8 +37,12 @@
     .location-btn:hover, .cta-btn:hover { background: #019f2b; }
 
     /* Footer */
-    .footer { margin-top: 50px; padding: 5px; background: #fff; text-align: center; font-size: 14px; font-weight: bold; color: #333; }
+    .footer { margin-top: 50px; padding: 5px; background: #fff; text-align: center; font-size: 14px; font-weight: bold; color: #333; position: relative; }
     .footer hr { width: 90%; border: 1px solid #000; margin: 20px auto; }
+
+    /* Privacy & Terms Links */
+    .policy-links { position: fixed; bottom: 8px; right: 8px; display: flex; flex-direction: column; gap: 4px; }
+    .policy-links a { color: #000; font-size: 10px; text-decoration: none; opacity: 0.6; }
 
     /* Reveal */
     .thank-you { display: none; animation: fadeIn 0.5s ease-in-out; }
@@ -78,6 +82,10 @@
   <div class="footer">
     <hr />
     <p>Please make sure you follow the rules and guidelines mentioned so you can redeem your reward.</p>
+  </div>
+  <div class="policy-links">
+    <a href="https://contact.uplevelrewards.com/policies/privacy?utm_source=footer-partial" target="_blank">Privacy Policy</a>
+    <a href="https://contact.uplevelrewards.com/policies/terms?utm_source=footer-partial" target="_blank">Terms & Conditions</a>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
