@@ -6,41 +6,37 @@
   <title>Claim Your $1000 Cash Gift Card</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
-    body { font-family: 'Canva Sans', sans-serif; text-align: center; margin: 0; padding: 0; background: #FFFFFF; overflow-x: hidden; }
-    .top-section { width: 100%; padding: 20px 0; }
-    .card-image { max-width: 50%; height: auto; display: block; margin: 0 auto 4px; }
+    body { font-family: 'Canva Sans', sans-serif; text-align: center; margin: 0; padding: 0; background: #FFFFFF; }
+    .top-section { padding: 20px 0; }
+    .card-image { max-width: 50%; height: auto; margin: 0 auto; display: block; }
     .main-content { padding: 10px; max-width: 90%; margin: 0 auto; }
 
-    /* Cash Balance Title */
+    /* Headers */
     .cash-balance { font-size: 28px; color: #01D633; font-weight: bold; margin: 4px 0; }
-
-    /* Verified Badge Image */
-    .verified-image { display: block; margin: 8px auto 12px; width: auto; height: 64px; }
-
-    /* Divider */
-    .divider { border: none; height: 2px; background-color: #D5FFD5; width: 95%; margin: 12px auto; }
+    .verified-image { margin: 4px auto; height: 64px; }
+    .divider { height: 3px; background-color: #D5FFD5; width: 98%; margin: 8px auto; border: none; }
 
     /* Animated Amount */
     .title-block { margin-bottom: 20px; }
     #animatedAmount { font-size: 36px; font-weight: bold; color: #01D633; }
     .subtitle { font-size: 18px; color: #000; font-weight: 700; margin-top: 8px; }
 
-    /* Steps */
+    /* Steps with custom markers */
     .steps { max-width: 400px; margin: 20px auto; }
-    .steps ol { list-style-position: inside; padding-left: 0; }
-    .steps ol li { font-size: 16px; font-weight: 700; margin: 8px 0; color: #000; }
-    .steps ol li::marker { color: #01D633; font-weight: bold; }
+    .steps ol { list-style: none; padding: 0; }
+    .steps li { display: flex; align-items: center; margin: 8px 0; font-size: 16px; font-weight: 700; color: #000; }
+    .step-number { background: #01D633; color: #000; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 8px; font-size: 16px; font-weight: bold; }
 
     /* Buttons */
     .location-section, .thank-you { margin-bottom: 20px; }
-    .location-btn, .cta-btn { display: block; width: 90%; margin: 10px auto; padding: 14px; font-size: 22px; font-weight: bold; color: #FFF; background: #01D633; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; }
+    .location-btn, .cta-btn { width: 90%; margin: 10px auto; padding: 14px; font-size: 22px; font-weight: bold; color: #FFF; background: #01D633; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; display: block; }
     .location-btn:hover, .cta-btn:hover { background: #019f2b; }
 
     /* Footer */
     .footer { margin-top: 50px; padding: 5px; background: #fff; text-align: center; font-size: 14px; font-weight: bold; color: #333; }
     .footer hr { width: 90%; border: 1px solid #000; margin: 20px auto; }
 
-    /* Animation */
+    /* Reveal */
     .thank-you { display: none; animation: fadeIn 0.5s ease-in-out; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
   </style>
@@ -59,10 +55,10 @@
     </div>
     <div class="steps">
       <ol>
-        <li>Choose your location below to continue</li>
-        <li>Enter your email & basic info</li>
-        <li>Complete 3-5 deals</li>
-        <li>Claim your reward!</li>
+        <li><span class="step-number">1</span>Choose your location below to continue</li>
+        <li><span class="step-number">2</span>Enter your email & basic info</li>
+        <li><span class="step-number">3</span>Complete 3-5 deals</li>
+        <li><span class="step-number">4</span>Claim your reward!</li>
       </ol>
     </div>
     <div class="location-section">
@@ -83,17 +79,14 @@
     document.addEventListener('DOMContentLoaded', () => {
       const el = document.getElementById('animatedAmount');
       const duration = 3000;
-      const frameRate = 30;
-      const totalFrames = Math.round(duration / (1000 / frameRate));
-      let frame = 0;
-      const countTo = 1000.00;
-      const counter = setInterval(() => {
-        frame++;
-        const progress = frame / totalFrames;
-        const currentAmount = countTo * progress;
-        el.textContent = '$' + currentAmount.toFixed(2);
-        if (frame === totalFrames) clearInterval(counter);
-      }, 1000 / frameRate);
+      const countTo = 1000;
+      const intervalTime = duration / countTo;
+      let count = 0;
+      const timer = setInterval(() => {
+        count++;
+        el.textContent = '$' + count.toFixed(2);
+        if (count >= countTo) clearInterval(timer);
+      }, intervalTime);
     });
     function showThankYou() {
       document.querySelector('.location-section').style.display = 'none';
