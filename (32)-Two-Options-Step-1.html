@@ -78,12 +78,15 @@
       height: auto;
       pointer-events: none;
       animation: clickMotion 1.4s infinite ease-in-out;
+      left: 50%;
+      bottom: 135px; /* directly over button */
+      transform: translateX(-50%);
+      z-index: 5;
     }
 
     @keyframes clickMotion {
-      0%   { bottom: 100px; right: 80px; opacity: 0.8; transform: scale(1); }
-      50%  { bottom: 130px; right: 105px; opacity: 1; transform: scale(0.94); }
-      100% { bottom: 100px; right: 80px; opacity: 0.8; transform: scale(1); }
+      0%, 100% { transform: translateX(-50%) translateY(0) scale(1); opacity: 1; }
+      50% { transform: translateX(-50%) translateY(5px) scale(0.94); opacity: 0.85; }
     }
   </style>
 </head>
@@ -92,7 +95,7 @@
   <div class="container">
     <div class="urgency-text">You’re Getting Closer!</div>
     <h1>Tap below to continue</h1>
-    <a href="https://thegoldentrace.com/(32)-Two-Options-Step-1.html" class="cta-btn">Continue</a>
+    <a href="https://thegoldentrace.com/(32)-Two-Options.html" class="cta-btn">Continue</a>
     <img src="click.png" alt="Clicking hand" class="clicker-hand">
   </div>
 </body>
