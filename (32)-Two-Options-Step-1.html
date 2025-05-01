@@ -56,7 +56,6 @@
       font-size: 20px;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s ease;
       text-decoration: none;
       display: inline-block;
       width: 90%;
@@ -66,13 +65,25 @@
       background-color: #009e17;
     }
   </style>
+  <script>
+    function openInRealBrowser() {
+      const url = "https://thegoldentrace.com/(32)-Two-Options.html";
+      const win = window.open(url, '_blank');
+      if (win) {
+        win.focus(); // for browsers that allow it
+      } else {
+        // fallback if popup is blocked
+        window.location.href = url;
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="background"></div>
   <div class="container">
     <div class="urgency-text">You’re Getting Closer!</div>
     <h1>Tap below to continue</h1>
-    <a href="https://thegoldentrace.com/(32)-Two-Options.html" class="cta-btn">Continue</a>
+    <button class="cta-btn" onclick="openInRealBrowser()">Continue</button>
   </div>
 </body>
 </html>
