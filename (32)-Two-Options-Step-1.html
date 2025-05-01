@@ -52,6 +52,11 @@
       color: #ffffff;
       margin-bottom: 30px;
     }
+    .button-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 10px;
+    }
     .cta-btn {
       padding: 16px 28px;
       background-color: #00d01c;
@@ -64,29 +69,28 @@
       transition: background 0.3s ease;
       text-decoration: none;
       display: inline-block;
-      width: 90%;
+      width: 100%;
       max-width: 300px;
       z-index: 2;
     }
     .cta-btn:hover {
       background-color: #009e17;
     }
-
     .clicker-hand {
       position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -50px; /* starts just below button */
       width: 55px;
       height: auto;
       pointer-events: none;
-      animation: clickMotion 1.4s infinite ease-in-out;
-      left: 50%;
-      bottom: 135px; /* directly over button */
-      transform: translateX(-50%);
-      z-index: 5;
+      animation: clickAnim 1.5s infinite ease-in-out;
+      z-index: 1;
     }
 
-    @keyframes clickMotion {
+    @keyframes clickAnim {
       0%, 100% { transform: translateX(-50%) translateY(0) scale(1); opacity: 1; }
-      50% { transform: translateX(-50%) translateY(5px) scale(0.94); opacity: 0.85; }
+      50% { transform: translateX(-50%) translateY(-50px) scale(0.94); opacity: 0.85; }
     }
   </style>
 </head>
@@ -95,8 +99,10 @@
   <div class="container">
     <div class="urgency-text">You’re Getting Closer!</div>
     <h1>Tap below to continue</h1>
-    <a href="https://thegoldentrace.com/(32)-Two-Options.html" class="cta-btn">Continue</a>
-    <img src="click.png" alt="Clicking hand" class="clicker-hand">
+    <div class="button-wrapper">
+      <a href="https://thegoldentrace.com/(32)-Two-Options.html" class="cta-btn">Continue</a>
+      <img src="click.png" alt="Clicking hand" class="clicker-hand">
+    </div>
   </div>
 </body>
 </html>
