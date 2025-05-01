@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       background-color: #00b200;
       color: white;
       text-align: center;
@@ -24,13 +24,14 @@
       background-color: #000;
       color: white;
       border: none;
-      padding: 15px 30px;
+      padding: 15px 40px;
       font-size: 22px;
       font-weight: bold;
       border-radius: 8px;
       cursor: pointer;
       margin: 10px 0;
-      display: inline-block;
+      width: 300px;
+      max-width: 90%;
     }
 
     .fade {
@@ -54,9 +55,15 @@
       font-weight: bold;
     }
 
+    .black {
+      color: #000000;
+      font-weight: bold;
+    }
+
     .footer {
       margin-top: 40px;
       font-size: 18px;
+      color: #000000;
     }
   </style>
 </head>
@@ -72,9 +79,13 @@
 
   <h1>HOW IT WORKS</h1>
 
-  <p id="instruction" class="fade">CHOOSE A REGION ABOVE</p>
+  <p id="instruction" class="fade">
+    CHOOSE A <span class="black">REGION</span> ABOVE
+  </p>
   <p>TELL US A LITTLE ABOUT YOURSELF</p>
-  <p>COMPLETE 2–3 DEALS <span class="highlight">(IMPORTANT)</span></p>
+  <p>
+    COMPLETE 2–3 DEALS <span class="black">(IMPORTANT)</span>
+  </p>
   <p>CLAIM YOUR REWARD AND REPEAT</p>
 
   <p class="highlight" style="margin-top: 20px;">HUGE TIP:</p>
@@ -86,7 +97,8 @@
     function selectRegion() {
       document.getElementById("region-buttons").classList.add("hidden");
       document.getElementById("claim-now").classList.remove("hidden");
-      document.getElementById("instruction").textContent = "CLICK 'CLAIM NOW' ABOVE";
+      document.getElementById("instruction").innerHTML =
+        `CLICK '<span class="black">CLAIM NOW</span>' ABOVE`;
     }
   </script>
 </body>
