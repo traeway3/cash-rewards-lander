@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #00b200;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 40px 0 20px;
+    }
+
+    .btn {
+      background-color: #000;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px 0;
+      width: 300px;
+      max-width: 90%;
+    }
+
+    .fade {
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+      height: 0;
+      overflow: hidden;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 1.6;
+      margin: 8px 0;
+      font-weight: bold;
+    }
+
+    .black {
+      color: #000000;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #000000;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="region-buttons" class="fade">
+    <button class="btn" onclick="selectRegion()">UNITED STATES</button><br>
+    <button class="btn" onclick="selectRegion()">CANADA</button>
+  </div>
+
+  <div id="claim-now" class="fade hidden">
+    <button class="btn" onclick="window.location.href='https://glstrck.com/aff_c?offer_id=313&aff_id=27696&source=32.3-416.1-Two-Options'">CLAIM NOW</button>
+  </div>
+
+  <h1>HOW IT WORKS</h1>
+
+  <p id="instruction" class="fade">
+    CHOOSE A <span class="black">REGION</span> ABOVE
+  </p>
+  <p>TELL US A LITTLE ABOUT YOURSELF</p>
+  <p>
+    COMPLETE 2–3 DEALS <span class="black">(IMPORTANT)</span>
+  </p>
+  <p>CLAIM YOUR REWARD AND REPEAT</p>
+
+  <p style="margin-top: 20px;"><span style="font-weight: bold;">HUGE TIP:</span> THE MORE DEALS YOU COMPLETE, THE MORE YOU EARN!</p>
+
+  <div class="footer">COPYRIGHT 2024 ©</div>
+
+  <script>
+    function selectRegion() {
+      document.getElementById("region-buttons").classList.add("hidden");
+      document.getElementById("claim-now").classList.remove("hidden");
+      document.getElementById("instruction").innerHTML =
+        'CLICK <span class="black">"CLAIM NOW"</span> ABOVE';
+    }
+  </script>
+</body>
+</html>
