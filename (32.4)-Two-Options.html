@@ -128,6 +128,12 @@
       document.querySelector('.location-section').style.display = 'none';
       document.querySelector('.thank-you').style.display = 'block';
       document.querySelector('.cta-btn').style.display = 'block';
+
+      // Update first step text
+      const firstStep = document.querySelectorAll('.steps ol li')[0];
+      if (firstStep) {
+        firstStep.textContent = '1. CLICK "CLAIM NOW" BELOW';
+      }
     }
   </script>
 </head>
@@ -141,15 +147,14 @@
 
     <div class="steps">
       <ol>
-        <li> Choose A Region Below📍</li>
-        <li> Tell Us A Little About Yourself✍️</li>
-        <li> Complete 3-5 Deals (IMPORTANT)🚨</li>
-        <li> Claim Your Reward And Repeat💸</li>
+        <li>1. Choose A Region Below📍</li>
+        <li>2. Tell Us A Little About Yourself✍️</li>
+        <li>3. Complete 3-5 Deals (IMPORTANT)🚨</li>
+        <li>4. Claim Your Reward And Repeat💸</li>
       </ol>
     </div>
 
     <div class="location-section">
-      <h2>Where Are You Located?</h2>
       <button class="location-btn" onclick="showThankYou()">United States</button>
       <button class="location-btn" onclick="showThankYou()">Canada</button>
     </div>
