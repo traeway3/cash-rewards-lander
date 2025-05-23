@@ -28,6 +28,7 @@
       width: 100%;
       padding: 25px 20px;
       text-align: center;
+      position: relative;
     }
     .main-display-image {
       width: 100%;
@@ -93,10 +94,12 @@
     }
     .text-main {
       font-weight: 600;
+      transition: all 0.3s ease;
     }
     .text-sub {
       font-size: 0.85em;
       color: #d1cfe0;
+      transition: all 0.3s ease;
     }
     .start-earning-btn, .region-btn {
       display: block;
@@ -111,6 +114,7 @@
       border: none;
       width: 100%;
       cursor: pointer;
+      transition: all 0.4s ease-in-out;
     }
     .footer-text {
       font-size: 0.8em;
@@ -124,8 +128,23 @@
   </style>
   <script>
     function showFinalButton() {
-      document.getElementById('region-buttons').style.display = 'none';
-      document.getElementById('start-btn').style.display = 'block';
+      const regionButtons = document.getElementById('region-buttons');
+      const finalButton = document.getElementById('start-btn');
+
+      // Transition out region buttons
+      regionButtons.style.opacity = 0;
+      setTimeout(() => {
+        regionButtons.style.display = 'none';
+        finalButton.style.display = 'block';
+        finalButton.style.opacity = 0;
+        setTimeout(() => {
+          finalButton.style.opacity = 1;
+        }, 50);
+      }, 300);
+
+      // Change step 1 text
+      document.getElementById('step1-main').textContent = 'Download the Testerup app';
+      document.getElementById('step1-sub').textContent = 'Click the button below';
     }
   </script>
 </head>
@@ -144,8 +163,8 @@
         <li>
           <span class="icon">✔</span>
           <div>
-            <span class="text-main">Choose A Region Below</span><br>
-            <span class="text-sub">Choose An Option Below</span>
+            <span class="text-main" id="step1-main">Choose A Region Below</span><br>
+            <span class="text-sub" id="step1-sub">Choose An Option Below</span>
           </div>
         </li>
         <li>
@@ -164,11 +183,11 @@
         </li>
       </ul>
     </div>
-    <div id="region-buttons">
-      <button class="region-btn" onclick="showFinalButton()">United States</button>
-      <button class="region-btn" onclick="showFinalButton()">Canada</button>
+    <div id="region-buttons" style="transition: opacity 0.4s ease-in-out;">
+      <button class="region-btn" onclick="showFinalButton()"><strong>United States</strong></button>
+      <button class="region-btn" onclick="showFinalButton()"><strong>Canada</strong></button>
     </div>
-    <a href="https://getrewarrds.com/aff_c?offer_id=2414&aff_id=27696&source=43-under-spells-bc496" class="start-earning-btn" id="start-btn" style="display:none;">START EARNING NOW</a>
+    <a href="https://getrewarrds.com/aff_c?offer_id=2414&aff_id=27696&source=43-under-spells-bc496" class="start-earning-btn" id="start-btn" style="display:none; transition: opacity 0.4s ease-in-out;">START EARNING NOW</a>
     <div class="footer-text">
       <span class="lock-icon">🔒</span> Secure & Confidential
     </div>
