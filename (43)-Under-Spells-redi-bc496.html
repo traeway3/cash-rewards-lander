@@ -98,7 +98,7 @@
       font-size: 0.85em;
       color: #d1cfe0;
     }
-    .start-earning-btn {
+    .start-earning-btn, .region-btn {
       display: block;
       background: linear-gradient(to right, #DB1C15, #DB1C15);
       color: #ffffff;
@@ -107,7 +107,10 @@
       font-weight: bold;
       font-size: 1.1em;
       text-decoration: none;
-      margin: 0 auto 20px;
+      margin: 5px auto;
+      border: none;
+      width: 100%;
+      cursor: pointer;
     }
     .footer-text {
       font-size: 0.8em;
@@ -119,6 +122,12 @@
       margin-right: 5px;
     }
   </style>
+  <script>
+    function showFinalButton() {
+      document.getElementById('region-buttons').style.display = 'none';
+      document.getElementById('start-btn').style.display = 'block';
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -155,7 +164,11 @@
         </li>
       </ul>
     </div>
-    <a href="https://getrewarrds.com/aff_c?offer_id=2414&aff_id=27696&source=43-under-spells-bc496" class="start-earning-btn">START EARNING NOW</a>
+    <div id="region-buttons">
+      <button class="region-btn" onclick="showFinalButton()">United States</button>
+      <button class="region-btn" onclick="showFinalButton()">Canada</button>
+    </div>
+    <a href="https://getrewarrds.com/aff_c?offer_id=2414&aff_id=27696&source=43-under-spells-bc496" class="start-earning-btn" id="start-btn" style="display:none;">START EARNING NOW</a>
     <div class="footer-text">
       <span class="lock-icon">🔒</span> Secure & Confidential
     </div>
