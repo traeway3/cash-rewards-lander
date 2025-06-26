@@ -12,7 +12,7 @@
       text-align: center;
       margin: 0;
       padding: 0;
-      background-color: #FFFFFF;
+      background-color: #f8f8fa; /* Very light grey to subtly complement purple/white */
       overflow-x: hidden;
     }
     .top-section {
@@ -21,6 +21,7 @@
       width: 100vw;
       height: auto;
       padding: 30px 0;
+      position: relative;
     }
     .card-image {
       max-width: 90%;
@@ -35,6 +36,11 @@
       padding: 10px;
       margin: 0 auto;
       max-width: 90%;
+    }
+    h1 {
+        font-size: 28px; /* Adjusted for slightly larger heading */
+        color: #000000;
+        margin-top: 20px; /* Spacing below progress bar */
     }
     h1 span {
       color: #4002ed;
@@ -75,6 +81,7 @@
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
+      max-width: 400px; /* Added max-width for better control on larger screens */
     }
     .cta-btn:hover {
       background: #2e01a8;
@@ -95,6 +102,7 @@
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
+      max-width: 400px; /* Added max-width for better control on larger screens */
     }
     .location-btn:hover {
       background: #2e01a8;
@@ -111,7 +119,7 @@
     .footer {
       margin-top: 50px;
       padding: 5px;
-      background: #ffffff;
+      background: #f8f8fa; /* Consistent with body background */
       text-align: center;
       font-size: 14px;
       font-weight: bold;
@@ -119,8 +127,40 @@
     }
     .footer hr {
       width: 90%;
-      border: 1px solid black;
+      border: 1px solid #4002ed; /* Changed to dark purple */
       margin: 20px auto 10px auto;
+    }
+
+    /* NEW CSS FOR PROGRESS BAR */
+    .progress-container {
+        width: 80%;
+        max-width: 300px;
+        background-color: rgba(64, 2, 237, 0.2); /* Light transparent purple from logo */
+        border-radius: 10px;
+        height: 15px;
+        margin: 15px auto 0 auto; /* Adjusted margin to sit below image */
+        overflow: hidden;
+        position: relative;
+    }
+    .progress-bar {
+        height: 100%;
+        width: 33%; /* Initial width */
+        background-color: #ffd700; /* Gold color from coins */
+        border-radius: 10px;
+        transition: width 0.5s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .progress-text {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        line-height: 15px;
+        color: #4002ed; /* Dark purple text */
+        font-size: 10px;
+        font-weight: bold;
+        z-index: 2;
     }
   </style>
   <script>
@@ -134,11 +174,27 @@
         firstStep.textContent = 'Download the Playful app';
       }
     }
+
+    // Function to update progress bar
+    function updateProgressBar(percentage, text) {
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        progressBar.style.width = percentage + '%';
+        progressText.textContent = text;
+    }
+    // Initialize progress bar on load
+    window.onload = function() {
+        updateProgressBar(33, 'Reward Progress: 33%');
+    };
   </script>
 </head>
 <body>
   <div class="top-section">
-    <img src="playfullogo.png" alt="Cash Gift Card Image" class="card-image">
+    <img src="playfullogo.png" alt="Playful Rewards Logo" class="card-image">
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+        <div class="progress-text" id="progressText">Reward Progress: 33%</div>
+    </div>
   </div>
 
   <div class="main-content">
@@ -153,8 +209,8 @@
     </div>
 
     <div class="location-section">
-      <button class="location-btn" onclick="showThankYou()">United States</button>
-      <button class="location-btn" onclick="showThankYou()">Canada</button>
+      <button class="location-btn" onclick="showThankYou(); updateProgressBar(67, 'Reward Progress: 67%');">United States</button>
+      <button class="location-btn" onclick="showThankYou(); updateProgressBar(67, 'Reward Progress: 67%');">Canada</button>
     </div>
 
     <div class="thank-you">
