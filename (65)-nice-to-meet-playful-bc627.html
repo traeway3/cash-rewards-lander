@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HOW IT WORKS</title>
+  <title>Follow the instructions to start earning today!</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
 
@@ -12,24 +12,25 @@
       text-align: center;
       margin: 0;
       padding: 0;
-      background-color: #f8f8fa; /* Very light grey to subtly complement purple/white */
+      background-color: #f8f8fa; /* Very light grey to subtly complement colors */
       overflow-x: hidden;
     }
     .top-section {
-      background: url('Playful Back.png') no-repeat center center;
-      background-size: cover;
+      /* Background image removed as requested */
+      background-color: #FFFFFF; /* Or match the main color of the new image if it's solid */
       width: 100vw;
       height: auto;
-      padding: 30px 0;
+      padding: 30px 0 10px 0; /* Adjusted padding after removing background image */
       position: relative;
     }
     .card-image {
-      max-width: 90%;
+      max-width: 100%; /* Make it fairly big */
       height: auto;
       display: block;
       margin: 0 auto;
       position: relative;
       z-index: 1;
+      border-radius: 12px; /* Adding some border-radius for softer edges */
     }
     .main-content {
       background: transparent;
@@ -38,12 +39,12 @@
       max-width: 90%;
     }
     h1 {
-        font-size: 28px; /* Adjusted for slightly larger heading */
+        font-size: 28px;
         color: #000000;
-        margin-top: 20px; /* Spacing below progress bar */
+        margin-top: 20px;
     }
     h1 span {
-      color: #4002ed;
+      color: #3400E0; /* Changed from #4002ed */
       font-weight: bold;
     }
     .steps {
@@ -58,21 +59,28 @@
     .steps ol li {
       font-size: 16px;
       font-weight: 700;
-      margin: 5px 0;
+      margin: 15px 0; /* Increased margin for subtitles */
       color: #000000;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      white-space: normal; /* Allow text to wrap for subtitles */
+      overflow: visible; /* Allow content to flow */
+      text-overflow: clip; /* No ellipsis with normal wrapping */
     }
     .steps ol li::marker {
-      color: #4002ed;
+      color: #3400E0; /* Changed from #4002ed */
       font-weight: bold;
+    }
+    .step-subtitle {
+        font-size: 0.9em;
+        color: #D1CFE0; /* All subtitles this color */
+        font-weight: normal;
+        display: block;
+        margin-top: 2px;
     }
     .cta-btn {
       display: none;
       width: 90%;
       margin: 5px auto;
-      background: #4002ed;
+      background: #3400E0; /* Changed from #4002ed */
       color: #FFFFFF;
       font-size: 22px;
       font-weight: bold;
@@ -81,10 +89,10 @@
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
-      max-width: 400px; /* Added max-width for better control on larger screens */
+      max-width: 400px;
     }
     .cta-btn:hover {
-      background: #2e01a8;
+      background: #2e01a8; /* Adjusted hover for new primary color */
     }
     .location-section {
       margin-top: 5px;
@@ -93,7 +101,7 @@
       display: block;
       width: 90%;
       margin: 5px auto;
-      background: #4002ed;
+      background: #3400E0; /* Changed from #4002ed */
       color: #FFFFFF;
       font-size: 22px;
       font-weight: bold;
@@ -102,10 +110,10 @@
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
-      max-width: 400px; /* Added max-width for better control on larger screens */
+      max-width: 400px;
     }
     .location-btn:hover {
-      background: #2e01a8;
+      background: #2e01a8; /* Adjusted hover for new primary color */
     }
     .thank-you {
       display: none;
@@ -127,40 +135,37 @@
     }
     .footer hr {
       width: 90%;
-      border: 1px solid #4002ed; /* Changed to dark purple */
+      border: 1px solid #3400E0; /* Changed to new primary purple */
       margin: 20px auto 10px auto;
     }
 
-    /* NEW CSS FOR PROGRESS BAR */
+    /* NEW/MODIFIED CSS FOR PROGRESS BAR */
     .progress-container {
         width: 80%;
         max-width: 300px;
-        background-color: rgba(64, 2, 237, 0.2); /* Light transparent purple from logo */
+        background-color: rgba(52, 0, 224, 0.2); /* Light transparent purple from new primary color */
         border-radius: 10px;
         height: 15px;
-        margin: 15px auto 0 auto; /* Adjusted margin to sit below image */
+        margin: 5px auto 15px auto; /* Adjusted margin for text above */
         overflow: hidden;
-        position: relative;
+        position: relative; /* For progress bar position */
     }
     .progress-bar {
         height: 100%;
         width: 33%; /* Initial width */
-        background-color: #ffd700; /* Gold color from coins */
+        background-color: #3400E0; /* Changed to new primary purple */
         border-radius: 10px;
         transition: width 0.5s ease-in-out;
-        position: absolute;
+        position: absolute; /* Allows bar to be inside container but positioned */
         top: 0;
         left: 0;
     }
-    .progress-text {
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        line-height: 15px;
-        color: #4002ed; /* Dark purple text */
-        font-size: 10px;
+    .progress-text-label { /* New class for text above the bar */
+        color: #000000; /* Black color for progress text */
+        font-size: 14px; /* Adjusted font size */
         font-weight: bold;
-        z-index: 2;
+        margin-bottom: 5px; /* Space between text and bar */
+        display: block; /* Ensures it takes its own line */
     }
   </style>
   <script>
@@ -171,16 +176,16 @@
 
       const firstStep = document.querySelectorAll('.steps ol li')[0];
       if (firstStep) {
-        firstStep.textContent = 'Download the Playful app';
+        firstStep.innerHTML = 'Download the Playful app<span class="step-subtitle">Click the button below</span>'; // Changed to innerHTML for subtitle
       }
     }
 
     // Function to update progress bar
     function updateProgressBar(percentage, text) {
         const progressBar = document.getElementById('progressBar');
-        const progressText = document.getElementById('progressText');
+        const progressTextLabel = document.getElementById('progressTextLabel'); // Get the new label element
         progressBar.style.width = percentage + '%';
-        progressText.textContent = text;
+        progressTextLabel.textContent = text;
     }
     // Initialize progress bar on load
     window.onload = function() {
@@ -190,22 +195,16 @@
 </head>
 <body>
   <div class="top-section">
-    <img src="playfullogo.png" alt="Playful Rewards Logo" class="card-image">
-    <div class="progress-container">
+    <img src="playfulbackimage.jpg" alt="Playful Rewards Logo" class="card-image">
+    <span class="progress-text-label" id="progressTextLabel">Reward Progress: 33%</span> <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
-        <div class="progress-text" id="progressText">Reward Progress: 33%</div>
     </div>
   </div>
 
   <div class="main-content">
-    <h1>HOW IT WORKS</h1>
-
-    <div class="steps">
+    <h1>Follow the instructions<br>to start earning today!</h1> <div class="steps">
       <ol>
-        <li>Choose A Region Below📍</li>
-        <li>Try 1–3 Games <span style="color:#4002ed;">(IMPORTANT)</span>🚨</li>
-        <li>Cash out and Repeat💸</li>
-      </ol>
+        <li>Download the Playful app<span class="step-subtitle">Click the button below</span></li> <li>Earn More by Testing Multiple Games<span class="step-subtitle">Make over $100/day</span></li> <li>Pro tip: Make in-app purchases on<span class="step-subtitle">Increase Your Earnings Even More!</span></li> </ol>
     </div>
 
     <div class="location-section">
@@ -221,7 +220,7 @@
 
   <div class="footer">
     <hr>
-    <p style="text-align:center;">HUGE TIP: THE MORE DEALS YOU COMPLETE, THE MORE YOU EARN!</p>
+    <p style="text-align:center;">HUGE TIP: THE MORE GAMES YOU COMPLETE, THE MORE YOU EARN!</p>
     <p>COPYRIGHT 2024 ©</p>
   </div>
 </body>
