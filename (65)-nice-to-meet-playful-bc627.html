@@ -16,7 +16,6 @@
       overflow-x: hidden;
     }
     .top-section {
-      /* Background image removed as requested */
       background-color: #FFFFFF; /* Or match the main color of the new image if it's solid */
       width: 100vw;
       height: auto;
@@ -31,6 +30,7 @@
       position: relative;
       z-index: 1;
       border-radius: 12px; /* Adding some border-radius for softer edges */
+      margin-bottom: 25px; /* Increased space below the image */
     }
     .main-content {
       background: transparent;
@@ -44,7 +44,7 @@
         margin-top: 20px;
     }
     h1 span {
-      color: #3400E0; /* Changed from #4002ed */
+      color: #3400E0;
       font-weight: bold;
     }
     .steps {
@@ -61,17 +61,17 @@
       font-weight: 700;
       margin: 15px 0; /* Increased margin for subtitles */
       color: #000000;
-      white-space: normal; /* Allow text to wrap for subtitles */
-      overflow: visible; /* Allow content to flow */
-      text-overflow: clip; /* No ellipsis with normal wrapping */
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
     }
     .steps ol li::marker {
-      color: #3400E0; /* Changed from #4002ed */
+      color: #3400E0;
       font-weight: bold;
     }
     .step-subtitle {
         font-size: 0.9em;
-        color: #D1CFE0; /* All subtitles this color */
+        color: #D1CFE0;
         font-weight: normal;
         display: block;
         margin-top: 2px;
@@ -80,7 +80,7 @@
       display: none;
       width: 90%;
       margin: 5px auto;
-      background: #3400E0; /* Changed from #4002ed */
+      background: #3400E0;
       color: #FFFFFF;
       font-size: 22px;
       font-weight: bold;
@@ -89,10 +89,10 @@
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
-      max-width: 400px; /* Added max-width for better control on larger screens */
+      max-width: 400px;
     }
     .cta-btn:hover {
-      background: #2e01a8; /* Adjusted hover for new primary color */
+      background: #2e01a8;
     }
     .location-section {
       margin-top: 5px;
@@ -101,7 +101,7 @@
       display: block;
       width: 90%;
       margin: 5px auto;
-      background: #3400E0; /* Changed from #4002ed */
+      background: #3400E0;
       color: #FFFFFF;
       font-size: 22px;
       font-weight: bold;
@@ -127,7 +127,7 @@
     .footer {
       margin-top: 50px;
       padding: 5px;
-      background: #f8f8fa; /* Consistent with body background */
+      background: #f8f8fa;
       text-align: center;
       font-size: 14px;
       font-weight: bold;
@@ -135,7 +135,7 @@
     }
     .footer hr {
       width: 90%;
-      border: 1px solid #3400E0; /* Changed to new primary purple */
+      border: 1px solid #3400E0;
       margin: 20px auto 10px auto;
     }
 
@@ -143,29 +143,29 @@
     .progress-container {
         width: 80%;
         max-width: 300px;
-        background-color: rgba(52, 0, 224, 0.2); /* Light transparent purple from new primary color */
+        background-color: rgba(52, 0, 224, 0.2);
         border-radius: 10px;
         height: 15px;
-        margin: 5px auto 15px auto; /* Adjusted margin for text above */
+        margin: 5px auto 15px auto;
         overflow: hidden;
         position: relative;
     }
     .progress-bar {
         height: 100%;
-        width: 33%; /* Initial width */
-        background-color: #3400E0; /* Changed to new primary purple */
+        width: 33%;
+        background-color: #3400E0;
         border-radius: 10px;
         transition: width 0.5s ease-in-out;
         position: absolute;
         top: 0;
         left: 0;
     }
-    .progress-text-label { /* New class for text above the bar */
-        color: #000000; /* Black color for progress text */
-        font-size: 14px; /* Adjusted font size */
+    .progress-text-label {
+        color: #000000;
+        font-size: 14px;
         font-weight: bold;
-        margin-bottom: 5px; /* Space between text and bar */
-        display: block; /* Ensures it takes its own line */
+        margin-bottom: 5px;
+        display: block;
     }
   </style>
   <script>
@@ -195,7 +195,7 @@
         // Set initial Step 1 text and subtitle
         const step1 = document.getElementById('step1Text');
         if (step1) {
-          step1.innerHTML = 'Choose A Region Below📍<span class="step-subtitle">Choose An Option Below</span>';
+          step1.innerHTML = 'Choose A Region Below<span class="step-subtitle">Choose An Option Below</span>'; // Removed 📍
         }
     };
   </script>
@@ -216,8 +216,7 @@
       <ol>
         <li id="step1Text"></li>
         <li>Earn More by Testing Multiple Games<span class="step-subtitle">Make over $100/day</span></li>
-        <li>Pro tip: Make in-app purchases on<span class="step-subtitle">Increase Your Earnings Even More!</span></li>
-      </ol>
+        <li>Pro tip: Make in-app purchases on the games to earn faster<span class="step-subtitle">Increase Your Earnings Even More!</span></li> </ol>
     </div>
 
     <div class="location-section">
