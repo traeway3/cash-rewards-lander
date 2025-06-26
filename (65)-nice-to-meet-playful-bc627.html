@@ -89,7 +89,7 @@
       border-radius: 5px;
       cursor: pointer;
       text-decoration: none;
-      max-width: 400px;
+      max-width: 400px; /* Added max-width for better control on larger screens */
     }
     .cta-btn:hover {
       background: #2e01a8; /* Adjusted hover for new primary color */
@@ -113,7 +113,7 @@
       max-width: 400px;
     }
     .location-btn:hover {
-      background: #2e01a8; /* Adjusted hover for new primary color */
+      background: #2e01a8;
     }
     .thank-you {
       display: none;
@@ -148,7 +148,7 @@
         height: 15px;
         margin: 5px auto 15px auto; /* Adjusted margin for text above */
         overflow: hidden;
-        position: relative; /* For progress bar position */
+        position: relative;
     }
     .progress-bar {
         height: 100%;
@@ -156,7 +156,7 @@
         background-color: #3400E0; /* Changed to new primary purple */
         border-radius: 10px;
         transition: width 0.5s ease-in-out;
-        position: absolute; /* Allows bar to be inside container but positioned */
+        position: absolute;
         top: 0;
         left: 0;
     }
@@ -174,37 +174,50 @@
       document.querySelector('.thank-you').style.display = 'block';
       document.querySelector('.cta-btn').style.display = 'block';
 
-      const firstStep = document.querySelectorAll('.steps ol li')[0];
-      if (firstStep) {
-        firstStep.innerHTML = 'Download the Playful app<span class="step-subtitle">Click the button below</span>'; // Changed to innerHTML for subtitle
+      // Update Step 1 text and subtitle
+      const step1 = document.getElementById('step1Text');
+      if (step1) {
+        step1.innerHTML = 'Download the Playful app<span class="step-subtitle">Click the button below</span>';
       }
     }
 
     // Function to update progress bar
     function updateProgressBar(percentage, text) {
         const progressBar = document.getElementById('progressBar');
-        const progressTextLabel = document.getElementById('progressTextLabel'); // Get the new label element
+        const progressTextLabel = document.getElementById('progressTextLabel');
         progressBar.style.width = percentage + '%';
         progressTextLabel.textContent = text;
     }
-    // Initialize progress bar on load
+
+    // Initialize progress bar and Step 1 text on load
     window.onload = function() {
         updateProgressBar(33, 'Reward Progress: 33%');
+        // Set initial Step 1 text and subtitle
+        const step1 = document.getElementById('step1Text');
+        if (step1) {
+          step1.innerHTML = 'Choose A Region Below📍<span class="step-subtitle">Choose An Option Below</span>';
+        }
     };
   </script>
 </head>
 <body>
   <div class="top-section">
-    <img src="playfulbackimage.jpg" alt="Playful Rewards Logo" class="card-image">
-    <span class="progress-text-label" id="progressTextLabel">Reward Progress: 33%</span> <div class="progress-container">
+    <img src="playfulbackimage.png" alt="Playful Rewards Logo" class="card-image">
+    <span class="progress-text-label" id="progressTextLabel">Reward Progress: 33%</span>
+    <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
   </div>
 
   <div class="main-content">
-    <h1>Follow the instructions<br>to start earning today!</h1> <div class="steps">
+    <h1>Follow the instructions<br>to start earning today!</h1>
+
+    <div class="steps">
       <ol>
-        <li>Download the Playful app<span class="step-subtitle">Click the button below</span></li> <li>Earn More by Testing Multiple Games<span class="step-subtitle">Make over $100/day</span></li> <li>Pro tip: Make in-app purchases on<span class="step-subtitle">Increase Your Earnings Even More!</span></li> </ol>
+        <li id="step1Text"></li>
+        <li>Earn More by Testing Multiple Games<span class="step-subtitle">Make over $100/day</span></li>
+        <li>Pro tip: Make in-app purchases on<span class="step-subtitle">Increase Your Earnings Even More!</span></li>
+      </ol>
     </div>
 
     <div class="location-section">
@@ -220,7 +233,7 @@
 
   <div class="footer">
     <hr>
-    <p style="text-align:center;">HUGE TIP: THE MORE GAMES YOU COMPLETE, THE MORE YOU EARN!</p>
+    <p style="text-align:center;">HUGE TIP: THE MORE DEALS YOU COMPLETE, THE MORE YOU EARN!</p>
     <p>COPYRIGHT 2024 ©</p>
   </div>
 </body>
