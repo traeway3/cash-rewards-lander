@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Follow the instructions to start earning today!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Canva Sans', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #F8F8FA; /* Changed to #F8F8FA for the entire page background */
+      overflow-x: hidden;
+    }
+    .top-section {
+      background-color: #F8F8FA; /* Also matching the body background color */
+      width: 100vw;
+      height: auto;
+      padding: 30px 0 10px 0;
+      position: relative;
+    }
+    .card-image {
+      max-width: calc(100% - 80px); /* Made even smaller, allowing 40px padding on each side */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      padding: 0 10px;
+      position: relative;
+      z-index: 1;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+    .main-content {
+      background: transparent;
+      padding: 10px;
+      margin: 0 auto;
+      max-width: 90%;
+    }
+    h1 {
+        font-size: 28px;
+        color: #000000;
+        margin-top: 20px;
+    }
+    h1 span {
+      color: #3400E0;
+      font-weight: bold;
+    }
+    .steps {
+      text-align: center;
+      max-width: 400px;
+      margin: 5px auto;
+    }
+    .steps ol {
+      padding-left: 0;
+      list-style-position: inside;
+    }
+    .steps ol li {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 15px 0;
+      color: #000000;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: clip;
+    }
+    .steps ol li::marker {
+      color: #3400E0;
+      font-weight: bold;
+    }
+    .step-subtitle {
+        font-size: 0.9em;
+        color: #D1CFE0;
+        font-weight: normal;
+        display: block;
+        margin-top: 2px;
+    }
+    .cta-btn {
+      width: 90%;
+      margin: 5px auto;
+      background: #3400E0;
+      color: #FFFFFF;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      max-width: 400px;
+    }
+    .cta-btn:hover {
+      background: #2e01a8;
+    }
+    .thank-you {
+      margin-top: 5px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .thank-you h2 { /* Added rule for extra space below H2 */
+        margin-bottom: 20px; /* Adjust as needed for desired spacing */
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .footer {
+      margin-top: 50px;
+      padding: 5px;
+      background: #F8F8FA; /* Consistent with body background */
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+    .footer hr {
+      width: 90%;
+      border: 1px solid #3400E0;
+      margin: 20px auto 10px auto;
+    }
+
+    /* PROGRESS BAR CSS */
+    .progress-container {
+        width: 80%;
+        max-width: 300px;
+        background-color: rgba(52, 0, 224, 0.2);
+        border-radius: 10px;
+        height: 15px;
+        margin: 5px auto 15px auto;
+        overflow: hidden;
+        position: relative;
+    }
+    .progress-bar {
+        height: 100%;
+        width: 33%;
+        background-color: #3400E0;
+        border-radius: 10px;
+        transition: width 0.5s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .progress-text-label {
+        color: #000000;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+  </style>
+  <script>
+    function updateProgressBar(percentage, text) {
+        const progressBar = document.getElementById('progressBar');
+        const progressTextLabel = document.getElementById('progressTextLabel');
+        progressBar.style.width = percentage + '%';
+        progressTextLabel.textContent = text;
+    }
+
+    window.onload = function() {
+        updateProgressBar(33, 'Reward Progress: 33%');
+    };
+  </script>
+</head>
+<body>
+  <div class="top-section">
+    <img src="playfulbackimage.png" alt="Playful Rewards Logo" class="card-image">
+    <span class="progress-text-label" id="progressTextLabel">Reward Progress: 33%</span>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <h1>Follow the instructions<br>to start earning today!</h1>
+
+    <div class="steps">
+      <ol>
+        <li>Download the Playful app<span class="step-subtitle">Click the button below</span></li>
+        <li>Earn More by Testing Multiple Games<span class="step-subtitle">Make over $100/day</span></li>
+        <li>Pro tip: Make in-app purchases on the games to earn faster<span class="step-subtitle">Increase Your Earnings Even More!</span></li>
+      </ol>
+    </div>
+
+    <div class="thank-you">
+      <h2>Thank you! Click below to start earning👇</h2>
+      <a href="https://rewarrdsgiant.com/aff_c?offer_id=1337&aff_id=27696&source=67-summer-games-playful-bc631" class="cta-btn">START EARNING NOW!</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <hr>
+    <p style="text-align:center;">HUGE TIP: THE MORE DEALS YOU COMPLETE, THE MORE YOU EARN!</p>
+    <p>COPYRIGHT 2024 ©</p>
+  </div>
+</body>
+</html>
