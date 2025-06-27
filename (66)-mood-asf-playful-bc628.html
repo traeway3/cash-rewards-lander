@@ -12,26 +12,26 @@
       text-align: center;
       margin: 0;
       padding: 0;
-      background-color: #f8f8fa; /* Very light grey to subtly complement colors */
+      background-color: #F8F8FA; /* Changed to #F8F8FA for the entire page background */
       overflow-x: hidden;
     }
     .top-section {
-      background-color: #FFFFFF; /* Or match the main color of the new image if it's solid */
+      background-color: #F8F8FA; /* Also matching the body background color */
       width: 100vw;
       height: auto;
-      padding: 30px 0 10px 0; /* Adjusted padding after removing background image */
+      padding: 30px 0 10px 0;
       position: relative;
     }
     .card-image {
-      max-width: calc(100% - 20px); /* Adjust max-width to allow for 10px padding on each side */
+      max-width: calc(100% - 80px); /* Made even smaller, allowing 40px padding on each side */
       height: auto;
       display: block;
-      margin: 0 auto; /* Center the image */
-      padding: 0 10px; /* Add padding on left/right to prevent touching edges */
+      margin: 0 auto;
+      padding: 0 10px;
       position: relative;
       z-index: 1;
       border-radius: 12px;
-      margin-bottom: 25px; /* Increased space below the image */
+      margin-bottom: 25px;
     }
     .main-content {
       background: transparent;
@@ -78,7 +78,6 @@
         margin-top: 2px;
     }
     .cta-btn {
-      /* display: block; - Removed display:none from here as it's always visible now */
       width: 90%;
       margin: 5px auto;
       background: #3400E0;
@@ -95,11 +94,12 @@
     .cta-btn:hover {
       background: #2e01a8;
     }
-    /* .location-section removed as per request */
     .thank-you {
-      /* display: block; - Removed display:none from here as it's always visible now */
       margin-top: 5px;
       animation: fadeIn 0.5s ease-in-out;
+    }
+    .thank-you h2 { /* Added rule for extra space below H2 */
+        margin-bottom: 20px; /* Adjust as needed for desired spacing */
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
@@ -108,7 +108,7 @@
     .footer {
       margin-top: 50px;
       padding: 5px;
-      background: #f8f8fa;
+      background: #F8F8FA; /* Consistent with body background */
       text-align: center;
       font-size: 14px;
       font-weight: bold;
@@ -133,7 +133,7 @@
     }
     .progress-bar {
         height: 100%;
-        width: 33%; /* Initial width */
+        width: 33%;
         background-color: #3400E0;
         border-radius: 10px;
         transition: width 0.5s ease-in-out;
@@ -150,9 +150,6 @@
     }
   </style>
   <script>
-    // Removed showThankYou function as it's no longer needed for step transition or button visibility.
-
-    // Function to update progress bar
     function updateProgressBar(percentage, text) {
         const progressBar = document.getElementById('progressBar');
         const progressTextLabel = document.getElementById('progressTextLabel');
@@ -160,10 +157,8 @@
         progressTextLabel.textContent = text;
     }
 
-    // Initialize progress bar on load (Step 1 is now static in HTML)
     window.onload = function() {
         updateProgressBar(33, 'Reward Progress: 33%');
-        // No need to set step1 content here as it's static in HTML now.
     };
   </script>
 </head>
@@ -181,18 +176,14 @@
 
     <div class="steps">
       <ol>
-        <!-- Step 1 is now static and always visible -->
         <li>Download the Playful app<span class="step-subtitle">Click the button below</span></li>
         <li>Earn More by Testing Multiple Games<span class="step-subtitle">Make over $100/day</span></li>
         <li>Pro tip: Make in-app purchases on the games to earn faster<span class="step-subtitle">Increase Your Earnings Even More!</span></li>
       </ol>
     </div>
 
-    <!-- Removed the location-section div as per request -->
-
     <div class="thank-you">
       <h2>Thank you! Click below to start earning👇</h2>
-      <!-- IMPORTANT: Replace the href below with your actual affiliate link for Playful Rewards -->
       <a href="https://rewarrdsgiant.com/aff_c?offer_id=1337&aff_id=27696&source=65-nice-to-meet-playful-bc627" class="cta-btn">START EARNING NOW!</a>
     </div>
   </div>
