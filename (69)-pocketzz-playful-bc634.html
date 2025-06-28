@@ -239,8 +239,7 @@
         /* Enhanced focus states */
         button:focus {
             outline: none;
-            box-shadow: 
-                0 0 0 3px rgba(74, 64, 224, 0.3), /* Playful blue glow */
+            box-shadow: 0 0 0 3px rgba(74, 64, 224, 0.3), /* Playful blue glow */
                 0 25px 50px rgba(74, 64, 224, 0.4); /* Playful blue glow */
         }
 
@@ -254,10 +253,10 @@
 
         /* Logo image styling */
         .logo-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 16px;
-            object-fit: cover;
+            max-width: 180px; /* Make it larger while maintaining responsiveness */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: contain; /* Ensure entire image is visible, no cropping */
+            border-radius: 20px; /* Adjusted border radius */
             box-shadow: 0 8px 24px rgba(74, 64, 224, 0.3); /* Playful blue shadow */
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
@@ -403,7 +402,7 @@
             <div class="w-full max-w-md">
                 <div id="mainCard" class="main-card bg-white bg-opacity-95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 animate-float border border-blue-100">
                     <div class="flex justify-center mb-6">
-                        <img src="playfulbackimage.png" alt="Playful Rewards Logo" class="logo-image" style="width: 100px; height: 100px; border-radius: 20px;">
+                        <img src="playfulbackimage.png" alt="Playful Rewards Logo" class="logo-image">
                     </div>
 
                     <div class="text-center mb-8">
