@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your $750 Cash Now!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
+        
+        /* General Body and Layout */
+        body {
+            font-family: 'Canva Sans', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        /* Top Section and Images */
+        .top-section {
+            background: url('(1)springback.png') no-repeat center center;
+            background-size: cover;
+            width: 100vw;
+            height: auto;
+            padding: 30px 0;
+        }
+        .card-image {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Main Content Area */
+        .main-content {
+            background: transparent;
+            padding: 10px;
+            margin: 0 auto;
+            max-width: 90%;
+        }
+
+        /* Text and Steps */
+        h1 span {
+            color: #00d632;
+            font-weight: bold;
+        }
+        .steps {
+            text-align: center;
+            max-width: 400px;
+            margin: 5px auto;
+        }
+        .steps ol {
+            padding-left: 0;
+            list-style-position: inside;
+        }
+        .steps ol li {
+            font-size: 14px; /* Reduced font size to fit text on a single line */
+            font-weight: 700;
+            margin: 5px 0;
+            color: #000000;
+            white-space: nowrap; /* Forces text to a single line */
+            overflow: hidden; /* Hides overflowing text */
+            text-overflow: ellipsis; /* Adds ellipsis for truncated text */
+        }
+        .steps ol li::marker {
+            color: #00d632;
+            font-weight: bold;
+        }
+
+        /* Buttons and Location Section */
+        .cta-btn {
+            display: none;
+            width: 90%;
+            margin: 5px auto;
+            background: #00d632;
+            color: #FFFFFF;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .cta-btn:hover {
+            background: #00b02a;
+        }
+        .location-section {
+            margin-top: 5px;
+        }
+        .location-btn {
+            display: block;
+            width: 90%;
+            margin: 5px auto;
+            background: #00d632;
+            color: #FFFFFF;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .location-btn:hover {
+            background: #00b02a;
+        }
+        .thank-you {
+            display: none;
+            margin-top: 5px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            padding: 5px;
+            background: #ffffff;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+        .footer hr {
+            width: 90%;
+            border: 1px solid black;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        function showThankYou() {
+            document.querySelector('.location-section').style.display = 'none';
+            document.querySelector('.thank-you').style.display = 'block';
+            document.querySelector('.cta-btn').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="top-section">
+        <img src="(1)topcrd.png" alt="Cash Gift Card Image" class="card-image">
+    </div>
+    
+    <div class="main-content">
+        <h1>Claim Your <span style="color:#00d632;">$750 Cash Now!</span></h1>
+        
+        <div class="steps">
+            <ol>
+                <li>Choose Your Location Below To Continue📍</li>
+                <li>Answer A Simple Questionnaire✍️</li>
+                <li>Complete 3-5 deals (IMPORTANT)🚨</li>
+                <li>Claim Your Reward And Repeat!💸</li>
+            </ol>
+        </div>
+        
+        <div class="location-section">
+            <h2>Where Are You Located?</h2>
+            <button class="location-btn" onclick="showThankYou()">United States</button>
+            <button class="location-btn" onclick="showThankYou()">Canada</button>
+        </div>
+        
+        <div class="thank-you">
+            <h2>Thank you! Click below to start earning👇</h2>
+            <a href="https://rewarduplevel.com/aff_c?offer_id=313&aff_id=27696&source=80-phones-blessing-cash-bc645" class="cta-btn">CLAIM NOW!</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <hr>
+        <p>HUGE TIP: THE MORE DEALS YOU COMPLETE, THE MORE YOU EARN!</p>
+    </div>
+</body>
+</html>
