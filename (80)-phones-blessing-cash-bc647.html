@@ -138,11 +138,12 @@
         function showThankYou() {
             document.querySelector('.location-section').style.display = 'none';
             document.querySelector('.thank-you').style.display = 'block';
+            document.querySelector('.cta-btn').style.display = 'block';
             
-            // Change text of first list item
-            const firstStep = document.getElementById('first-step-text');
+            // Change text of first list item to "Start Here!"
+            const firstStep = document.querySelector('.steps ol li');
             if (firstStep) {
-                firstStep.textContent = "Click Below To Start Now!👇";
+                firstStep.innerHTML = "Start Here!👇";
             }
         }
     </script>
@@ -153,12 +154,13 @@
     </div>
     
     <div class="main-content">
-        <h1>HOW IT WORKS</h1>
+        <h1>Claim Your <span style="color:#00d632;">$750 Cash Now!</span></h1>
         
         <div class="steps">
             <ol>
-                <li id="first-step-text">Choose A Region Below📍</li>
-                <li>Earn More By Testing Multiple Games/Deals (<span style="color: #00d632;">Make Over $100/Day!</span>)🚨</li>
+                <li>Choose Your Location Below To Continue📍</li>
+                <li>Earn More By Testing Multiple Games/Deals (<span style="color: #000000;">Make Over $100/Day!</span>)🚨</li>
+                <li>Complete 3-5 deals (IMPORTANT)🚨</li>
                 <li>Cash Out And Repeat💸</li>
             </ol>
         </div>
@@ -170,8 +172,8 @@
         </div>
         
         <div class="thank-you">
-            <h2>Thank you! Click below to start earning👇</h2>
-            <a href="https://rewarduplevel.com/aff_c?offer_id=313&aff_id=27696&source=80-phones-blessing-cash-bc644" class="cta-btn">CLAIM NOW!</a>
+            <h2>Start Here!👇</h2>
+            <a href="https://rewarduplevel.com/aff_c?offer_id=313&aff_id=27696&source=80-phones-blessing-cash-bc644" class="cta-btn">START EARNING NOW!</a>
         </div>
     </div>
 
