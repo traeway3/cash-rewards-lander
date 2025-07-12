@@ -7,43 +7,111 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
         
+        /* Animations */
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* General Body and Layout */
         body {
             font-family: 'Canva Sans', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #FFFFFF;
+            background: linear-gradient(to bottom right, #005A00, #001A00);
             overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
+
+        .bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(0, 214, 50, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 176, 42, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(0, 255, 50, 0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .main-card-container {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-radius: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 214, 50, 0.1);
+            animation: float 6s ease-in-out infinite;
+            overflow: hidden;
+        }
+
         .top-section {
             background: url('(1)springback.png') no-repeat center center;
             background-size: cover;
-            width: 100vw;
-            height: auto;
-            padding: 30px 0;
+            width: 100%;
+            height: 150px;
+            position: relative;
         }
+
         .card-image {
-            max-width: 50%;
+            max-width: 60%;
             height: auto;
             display: block;
             margin: 0 auto;
             position: relative;
-            z-index: 1;
+            z-index: 11;
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         }
+
         .main-content {
             background: transparent;
             padding: 10px;
             margin: 0 auto;
             max-width: 90%;
+            position: relative;
+            z-index: 12;
+            padding-top: 20px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            color: #000000;
+            margin-top: 0;
+            margin-bottom: 10px; /* Reduced margin */
         }
         h1 span {
             color: #00d632;
             font-weight: bold;
         }
+        
         .steps {
-            text-align: center;
             max-width: 400px;
             margin: 5px auto;
+            font-size: 14px; /* Reduced font size */
         }
         .steps ol {
             padding-left: 0;
@@ -52,114 +120,200 @@
         .steps ol li {
             font-size: 16px;
             font-weight: 700;
-            margin: 5px 0;
+            margin: 5px 0; /* Reduced margin */
             color: #000000;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            white-space: normal; /* Allow text to wrap */
+            overflow: visible;
+            text-overflow: clip;
         }
         .steps ol li::marker {
             color: #00d632;
             font-weight: bold;
         }
-        .cta-btn {
-            display: none;
-            width: 90%;
-            margin: 5px auto;
-            background: #00d632;
-            color: #FFFFFF;
-            font-size: 22px;
-            font-weight: bold;
-            padding: 14px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .cta-btn:hover {
-            background: #00b02a;
-        }
+
         .location-section {
-            margin-top: 5px;
+            margin-top: 10px; /* Reduced margin */
         }
-        .location-btn {
-            display: block;
-            width: 90%;
-            margin: 5px auto;
-            background: #00d632;
-            color: #FFFFFF;
-            font-size: 22px;
-            font-weight: bold;
-            padding: 14px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .location-btn:hover {
-            background: #00b02a;
-        }
+        
         .thank-you {
             display: none;
-            margin-top: 5px;
+            margin-top: 10px; /* Reduced margin */
             animation: fadeIn 0.5s ease-in-out;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .thank-you h2 {
+            font-size: 20px; /* Reduced font size */
+            color: #000000;
+            margin-bottom: 10px; /* Reduced margin */
         }
-        .footer {
-            margin-top: 50px;
-            padding: 5px;
-            background: #ffffff;
-            text-align: center;
-            font-size: 14px;
+
+        /* Merged button styles from (80) */
+        .styled-button {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(to right, #00d632, #00b02a);
+            color: #FFFFFF;
             font-weight: bold;
-            color: #333;
+            padding: 10px; /* Reduced padding */
+            border-radius: 5px;
+            font-size: 18px; /* Reduced font size */
+            text-decoration: none;
+            display: block;
+            width: 80%;
+            max-width: 300px;
+            margin: 5px auto;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 8px 16px rgba(0, 214, 50, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space between text and arrow */
+            padding-right: 20px; /* Padding for the arrow */
+        }
+        .styled-button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 
+                0 25px 50px rgba(0, 214, 50, 0.4),
+                0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .styled-button:active {
+            transform: translateY(-1px) scale(0.98);
+            transition: all 0.1s ease;
+        }
+        .styled-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: left 0.5s;
+        }
+        .styled-button:hover::before {
+            left: 100%;
+        }
+
+        .styled-button span {
+            padding-left: 20px; /* Added padding to align text */
+        }
+
+        .footer {
+            margin-top: 10px; /* Reduced margin */
+            padding: 5px;
+            background: transparent;
+            text-align: center;
+            font-size: 12px; /* Reduced font size */
+            font-weight: bold;
+            color: #FFFFFF;
         }
         .footer hr {
             width: 90%;
-            border: 1px solid black;
-            margin: 20px auto;
+            border: 1px solid #00d632;
+            margin: 20px auto 10px auto;
         }
+
     </style>
     <script>
+        const OFFER_URL = 'https://rewarduplevel.com/aff_c?offer_id=313&aff_id=27696&source=80-phones-blessing-cash-bc644';
+        
+        function handleButtonClick(event) {
+            event.preventDefault();
+
+            const button = event.target.closest('button, a');
+            const buttonText = button.querySelector('span');
+            const buttonArrow = button.querySelector('svg');
+            
+            button.classList.add('loading');
+            buttonText.textContent = 'PROCESSING...';
+            if (buttonArrow) buttonArrow.style.display = 'none';
+
+            const conversionProps = {
+                content_name: 'Cash Offer Application',
+                content_category: 'Sweepstakes',
+                content_ids: ['cash_offer_application'],
+                content_type: 'product_group',
+                value: 750.00,
+                currency: 'USD'
+            };
+            
+            try {
+                fbq('track', 'InitiateCheckout', conversionProps);
+                fbq('track', 'SubmitApplication', conversionProps);
+                fbq('track', 'Lead', conversionProps);
+                console.log('Meta Pixel conversion events tracked successfully');
+            } catch(e) {
+                console.error('Meta Pixel tracking error:', e);
+            }
+            
+            setTimeout(function() {
+                window.location.href = OFFER_URL;
+            }, 1000);
+        }
+
         function showThankYou() {
             document.querySelector('.location-section').style.display = 'none';
             document.querySelector('.thank-you').style.display = 'block';
-            document.querySelector('.cta-btn').style.display = 'block';
+            
+            const ctaButton = document.querySelector('.thank-you .styled-button');
+            if (ctaButton) {
+                ctaButton.addEventListener('click', handleButtonClick);
+            }
         }
     </script>
 </head>
 <body>
-    <div class="top-section">
-        <img src="(1)topcrd.png" alt="Cash Gift Card Image" class="card-image">
+    <div class="bg-pattern"></div>
+    <div class="main-card-container">
+        <div class="top-section">
+            <img src="(1)topcrd.png" alt="Cash Gift Card Image" class="card-image">
+        </div>
+        
+        <div class="main-content">
+            <h1>Claim Your <span style="color:#00d632;">$750 Cash Now!</span></h1>
+            
+            <div class="steps">
+                <ol>
+                    <li>Choose Your Location Below To Continue📍</li>
+                    <li>Answer A Simple Questionnaire✍️</li>
+                    <li>Complete 3-5 deals (IMPORTANT)🚨</li>
+                    <li>Claim Your Reward And Repeat!💸</li>
+                </ol>
+            </div>
+            
+            <div class="location-section">
+                <h2>Where Are You Located?</h2>
+                <button class="styled-button" onclick="showThankYou()">
+                    <span>United States</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <button class="styled-button" onclick="showThankYou()">
+                    <span>Canada</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="thank-you">
+                <h2>Thank you! Click below to start earning👇</h2>
+                <a href="https://rewarduplevel.com/aff_c?offer_id=313&aff_id=27696&source=80-phones-blessing-cash-bc644" class="styled-button">
+                    <span>CLAIM NOW!</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
     
-    <div class="main-content">
-        <h1>Claim Your <span style="color:#00d632;">$750 Cash Now!</span></h1>
-        
-        <div class="steps">
-            <ol>
-                <li>Choose Your Location Below To Continue📍</li>
-                <li>Answer A Simple Questionnaire✍️</li>
-                <li>Complete 3-5 deals (IMPORTANT)🚨</li>
-                <li>Claim Your Reward And Repeat!💸</li>
-            </ol>
-        </div>
-        
-        <div class="location-section">
-            <h2>Where Are You Located?</h2>
-            <button class="location-btn" onclick="showThankYou()">United States</button>
-            <button class="location-btn" onclick="showThankYou()">Canada</button>
-        </div>
-        
-        <div class="thank-you">
-            <h2>Thank you! Click below to start earning👇</h2>
-            <a href="https://rewarduplevel.com/aff_c?offer_id=313&aff_id=27696&source=80-phones-blessing-cash-bc644" class="cta-btn">CLAIM NOW!</a>
-        </div>
-    </div>
-
     <div class="footer">
         <hr>
         <p>HUGE TIP: THE MORE DEALS YOU COMPLETE, THE MORE YOU EARN!</p>
