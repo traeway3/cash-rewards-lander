@@ -57,13 +57,13 @@
             list-style-position: inside;
         }
         .steps ol li {
-            font-size: 16px;
+            font-size: 14px; /* Reduced font size to fit text on a single line */
             font-weight: 700;
             margin: 5px 0;
             color: #000000;
-            white-space: normal;
-            overflow: visible;
-            text-overflow: clip;
+            white-space: nowrap; /* Forces text to a single line */
+            overflow: hidden; /* Hides overflowing text */
+            text-overflow: ellipsis; /* Adds ellipsis for truncated text */
         }
         .steps ol li::marker {
             color: #00d632;
