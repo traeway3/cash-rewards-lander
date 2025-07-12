@@ -6,6 +6,7 @@
     <title>Claim Your $750 Cash Now!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Meta Pixel -->
     <script>
         !function(f,b,e,v,n,t,s){
             if(f.fbq)return;
@@ -15,7 +16,7 @@
             t.src=v; s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);
         }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-        fbq('init', '1642827413055904');
+        fbq('init', '1642827413055904'); // Using the pixel ID from previous template
         fbq('track', 'PageView');
 
         const pageProps = {
@@ -32,10 +33,12 @@
         :root {
             --cash-green: #00D632;
             --cash-dark-green: #00B02A;
-            --cash-light-green: #D6FFE0;
-            --cash-gold: #FFD700;
+            --cash-light-green: #D6FFE0; /* For lighter accents if needed */
+            --cash-text-dark: #333333; /* Dark text for contrast on light elements */
+            --cash-text-light: #FFFFFF; /* Light text for contrast on dark elements */
         }
-        
+
+        /* Animations from (80)-phones-blessing-cash-bc643.html */
         @keyframes float {
             0%, 100% {
                 transform: translateY(0px);
@@ -49,43 +52,24 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .main-card {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border-radius: 1.5rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            padding: 2rem;
-            border: 1px solid rgba(0, 214, 50, 0.1);
-            position: relative;
-            z-index: 10;
-        }
 
-        .main-card:hover {
-            transform: translateY(-8px) scale(1.01);
-            box-shadow: 
-                0 30px 60px rgba(0, 214, 50, 0.2),
-                0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* General Body and Layout */
+        /* Base body and wrapper for background effects */
         body {
             font-family: 'Canva Sans', sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #000000;
+            background: linear-gradient(to bottom right, #005A00, #001A00); /* Dark green to black gradient */
             overflow-x: hidden;
             min-height: 100vh;
+            display: flex; /* Use flexbox for centering content */
+            flex-direction: column; /* Stack content vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
             position: relative;
-            background: linear-gradient(to bottom right, #005A00, #001A00); /* Dark green to black gradient */
         }
-        
-        /* Background patterns from (80)-phones-blessing-cash-bc643.html */
+
+        /* Background pattern/ambiance from (80) */
         .bg-pattern {
             position: absolute;
             top: 0;
@@ -98,42 +82,111 @@
                 radial-gradient(circle at 40% 80%, rgba(0, 255, 50, 0.1) 0%, transparent 50%);
             animation: float 20s ease-in-out infinite;
             opacity: 1;
-            z-index: 1;
+            z-index: 1; /* Ensure it's behind the main card */
         }
 
-        .container-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+        /* Main card styling - adapted from (23.3) but with (80) aesthetics */
+        .main-card-container {
+            position: relative;
+            z-index: 10; /* Ensure it's above the background pattern */
             width: 100%;
+            max-width: 420px; /* Constrain max width for desktop */
+            margin: 20px auto; /* Add margin for spacing */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* From (80) */
+            border-radius: 1.5rem; /* Rounded corners from (80) */
+            background-color: rgba(255, 255, 255, 0.95); /* White with opacity from (80) */
+            backdrop-filter: blur(12px); /* Glassmorphism from (80) */
+            border: 1px solid rgba(0, 214, 50, 0.1); /* Light green border from (80) */
+            animation: float 6s ease-in-out infinite; /* Floating animation from (80) */
+            padding: 2rem; /* Padding from (80) */
         }
 
-        .main-content {
-            background: transparent;
-            padding: 10px;
-            margin: 0 auto;
-            max-width: 90%;
-        }
-        
-        /* Image and top section adjustments */
+        /* Top section for background image and card image */
         .top-section {
             background: url('(1)springback.png') no-repeat center center;
             background-size: cover;
-            width: 100%;
-            height: 200px;
-            margin-bottom: 2rem;
+            width: calc(100% + 4rem); /* Account for main-card-container padding */
+            height: 150px; /* Adjusted height for the background image */
+            position: absolute;
+            top: 0;
+            left: -2rem; /* Offset by padding to cover full width */
+            border-top-left-radius: 1.5rem; /* Match main card border radius */
+            border-top-right-radius: 1.5rem; /* Match main card border radius */
+            overflow: hidden; /* Hide overflow from image */
         }
+
         .card-image {
-            max-width: 50%;
+            max-width: 60%; /* Adjusted to be slightly larger but still contained */
             height: auto;
             display: block;
             margin: 0 auto;
-            margin-top: -80px;
-            z-index: 10;
+            position: relative;
+            z-index: 11; /* Ensure it's above the top-section background */
+            margin-top: 20px; /* Position within the top-section */
+            border-radius: 12px; /* Rounded corners for the image itself */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Main content area within the card */
+        .main-content {
+            background: transparent;
+            padding: 10px; /* Existing padding */
+            margin: 0 auto;
+            max-width: 90%;
+            position: relative;
+            z-index: 12; /* Ensure it's above other elements */
+            margin-top: 10px; /* Space after the image */
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #000000;
+            margin-top: 20px;
+        }
+        h1 span {
+            color: var(--cash-green);
+            font-weight: bold;
+        }
+
+        .steps {
+            text-align: center;
+            max-width: 400px;
+            margin: 5px auto;
+        }
+        .steps ol {
+            padding-left: 0;
+            list-style-position: inside;
+        }
+        .steps ol li {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 10px 0;
+            color: #000000;
+            white-space: normal;
+            overflow: visible;
+            text-overflow: clip;
+        }
+        .steps ol li::marker {
+            color: var(--cash-green);
+            font-weight: bold;
+        }
+
+        .location-section {
+            margin-top: 20px;
         }
         
-        /* Merged button styles from (80) */
+        .thank-you {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .thank-you h2 {
+            font-size: 22px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        /* Styled button class for both location and CTA buttons */
         .styled-button {
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
@@ -142,7 +195,7 @@
             color: #FFFFFF;
             font-weight: bold;
             padding: 14px;
-            border-radius: 5px;
+            border-radius: 5px; /* Keep original border-radius for location buttons */
             font-size: 22px;
             text-decoration: none;
             display: block;
@@ -186,49 +239,6 @@
             left: 100%;
         }
 
-        .location-section {
-            margin-top: 20px;
-        }
-        
-        .thank-you {
-            display: none;
-            margin-top: 20px;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        /* Font and color styles */
-        h1 {
-            font-size: 28px;
-            color: #000000;
-            margin-top: 20px;
-        }
-        h1 span {
-            color: var(--cash-green);
-            font-weight: bold;
-        }
-        
-        .steps {
-            max-width: 400px;
-            margin: 5px auto;
-        }
-        .steps ol {
-            padding-left: 0;
-            list-style-position: inside;
-        }
-        .steps ol li {
-            font-size: 16px;
-            font-weight: 700;
-            margin: 10px 0;
-            color: #000000;
-            white-space: normal;
-            overflow: visible;
-            text-overflow: clip;
-        }
-        .steps ol li::marker {
-            color: var(--cash-green);
-            font-weight: bold;
-        }
-        
         /* Footer */
         .footer {
             margin-top: 50px;
@@ -238,6 +248,8 @@
             font-size: 14px;
             font-weight: bold;
             color: #FFFFFF;
+            position: relative;
+            z-index: 10; /* Ensure footer is above background pattern */
         }
         .footer hr {
             width: 90%;
@@ -283,64 +295,64 @@
             }, 1000);
         }
 
-        function showThankYouAndRedirect() {
+        function showThankYou() {
             document.querySelector('.location-section').style.display = 'none';
             document.querySelector('.thank-you').style.display = 'block';
             
             // Re-apply handleButtonClick to the new CTA button
-            const ctaButton = document.querySelector('.thank-you .cta-btn');
+            const ctaButton = document.querySelector('.thank-you .styled-button');
             if (ctaButton) {
                 ctaButton.addEventListener('click', handleButtonClick);
             }
         }
     </script>
 </head>
-<body class="bg-gradient-to-br from-green-900 via-green-800 to-black">
-    <div class="bg-pattern"></div>
-    <div class="container-wrapper">
-        <div class="w-full max-w-md animate-float">
-            <div id="mainCard" class="main-card">
-                <div class="top-section">
-                    <img src="(1)topcrd.png" alt="Cash Gift Card Image" class="card-image">
-                </div>
-                
-                <div class="main-content">
-                    <h1>Claim Your <span style="color:#00d632;">$750 Cash Now!</span></h1>
-                    
-                    <div class="steps">
-                        <ol>
-                            <li>Choose Your Location Below To Continue📍</li>
-                            <li>Answer A Simple Questionnaire✍️</li>
-                            <li>Complete 3-5 deals (IMPORTANT)🚨</li>
-                            <li>Claim Your Reward And Repeat!💸</li>
-                        </ol>
-                    </div>
-                    
-                    <div class="location-section">
-                        <button class="styled-button" onclick="showThankYouAndRedirect()">
-                            <span>United States</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                        <button class="styled-button" onclick="showThankYouAndRedirect()">
-                            <span>Canada</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </button>
-                    </div>
-                    
-                    <div class="thank-you">
-                        <h2>Thank you! Click below to start earning👇</h2>
-                        <a href="https://rewarduplevel.com/aff_c?offer_id=313&aff_id=27696&source=80-phones-blessing-cash-bc644" class="styled-button">
-                            <span>CLAIM NOW!</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+<body>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1642827413055904&ev=PageView&noscript=1" /></noscript>
+
+    <div class="bg-pattern"></div> <!-- Background ambiance -->
+
+    <div class="main-card-container animate-float">
+        <div class="top-section">
+            <img src="(1)topcrd.png" alt="Cash Gift Card Image" class="card-image">
+        </div>
+        
+        <div class="main-content">
+            <h1>Claim Your <span style="color:#00d632;">$750 Cash Now!</span></h1>
+            
+            <div class="steps">
+                <ol>
+                    <li>Choose Your Location Below To Continue📍</li>
+                    <li>Answer A Simple Questionnaire✍️</li>
+                    <li>Complete 3-5 deals (IMPORTANT)🚨</li>
+                    <li>Claim Your Reward And Repeat!💸</li>
+                </ol>
+            </div>
+            
+            <div class="location-section">
+                <h2>Where Are You Located?</h2>
+                <button class="styled-button" onclick="showThankYou()">
+                    <span>United States</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+                <button class="styled-button" onclick="showThankYou()">
+                    <span>Canada</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="thank-you">
+                <h2>Thank you! Click below to start earning👇</h2>
+                <a href="https://rewarduplevel.com/aff_c?offer_id=313&aff_id=27696&source=80-phones-blessing-cash-bc644" class="styled-button">
+                    <span>CLAIM NOW!</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
             </div>
         </div>
     </div>
