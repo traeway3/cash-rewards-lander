@@ -6,7 +6,6 @@
     <title>Claim Your $750 Cash Now!</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Meta Pixel -->
     <script>
         !function(f,b,e,v,n,t,s){
             if(f.fbq)return;
@@ -33,9 +32,6 @@
         :root {
             --cash-green: #00D632;
             --cash-dark-green: #00B02A;
-            --cash-light-green: #D6FFE0; /* For lighter accents if needed */
-            --cash-text-dark: #333333; /* Dark text for contrast on light elements */
-            --cash-text-light: #FFFFFF; /* Light text for contrast on dark elements */
         }
 
         /* Animations from (80)-phones-blessing-cash-bc643.html */
@@ -52,7 +48,7 @@
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
+        
         /* Base body and wrapper for background effects */
         body {
             font-family: 'Canva Sans', sans-serif;
@@ -62,14 +58,12 @@
             background: linear-gradient(to bottom right, #005A00, #001A00); /* Dark green to black gradient */
             overflow-x: hidden;
             min-height: 100vh;
-            display: flex; /* Use flexbox for centering content */
-            flex-direction: column; /* Stack content vertically */
-            justify-content: center; /* Center vertically */
-            align-items: center; /* Center horizontally */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
         }
 
-        /* Background pattern/ambiance from (80) */
         .bg-pattern {
             position: absolute;
             top: 0;
@@ -82,74 +76,67 @@
                 radial-gradient(circle at 40% 80%, rgba(0, 255, 50, 0.1) 0%, transparent 50%);
             animation: float 20s ease-in-out infinite;
             opacity: 1;
-            z-index: 1; /* Ensure it's behind the main card */
+            z-index: 1;
         }
 
-        /* Main card styling - adapted from (23.3) but with (80) aesthetics */
         .main-card-container {
             position: relative;
-            z-index: 10; /* Ensure it's above the background pattern */
+            z-index: 10;
             width: 100%;
-            max-width: 420px; /* Constrain max width for desktop */
-            margin: 20px auto; /* Add margin for spacing */
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* From (80) */
-            border-radius: 1.5rem; /* Rounded corners from (80) */
-            background-color: rgba(255, 255, 255, 0.95); /* White with opacity from (80) */
-            backdrop-filter: blur(12px); /* Glassmorphism from (80) */
-            border: 1px solid rgba(0, 214, 50, 0.1); /* Light green border from (80) */
-            animation: float 6s ease-in-out infinite; /* Floating animation from (80) */
-            padding: 2rem; /* Padding from (80) */
+            max-width: 420px;
+            margin: 20px auto;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border-radius: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 214, 50, 0.1);
+            animation: float 6s ease-in-out infinite;
+            overflow: hidden; /* Crucial for containing the background image */
         }
 
-        /* Top section for background image and card image */
         .top-section {
             background: url('(1)springback.png') no-repeat center center;
             background-size: cover;
-            width: calc(100% + 4rem); /* Account for main-card-container padding */
-            height: 150px; /* Adjusted height for the background image */
-            position: absolute;
-            top: 0;
-            left: -2rem; /* Offset by padding to cover full width */
-            border-top-left-radius: 1.5rem; /* Match main card border radius */
-            border-top-right-radius: 1.5rem; /* Match main card border radius */
-            overflow: hidden; /* Hide overflow from image */
+            width: 100%;
+            height: 150px;
+            position: relative; /* Position relative for the card image */
         }
 
         .card-image {
-            max-width: 60%; /* Adjusted to be slightly larger but still contained */
+            max-width: 60%;
             height: auto;
             display: block;
             margin: 0 auto;
             position: relative;
-            z-index: 11; /* Ensure it's above the top-section background */
-            margin-top: 20px; /* Position within the top-section */
-            border-radius: 12px; /* Rounded corners for the image itself */
+            z-index: 11;
+            margin-top: 20px;
+            border-radius: 12px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         }
 
-        /* Main content area within the card */
         .main-content {
             background: transparent;
-            padding: 10px; /* Existing padding */
+            padding: 10px;
             margin: 0 auto;
             max-width: 90%;
             position: relative;
-            z-index: 12; /* Ensure it's above other elements */
-            margin-top: 10px; /* Space after the image */
+            z-index: 12;
+            padding-top: 20px; /* Added spacing from the top image */
         }
-
+        
+        /* Corrected title sizing */
         h1 {
-            font-size: 28px;
+            font-size: 28px; 
             color: #000000;
-            margin-top: 20px;
+            margin-top: 0;
+            margin-bottom: 20px;
         }
         h1 span {
-            color: var(--cash-green);
+            color: #00d632;
             font-weight: bold;
         }
-
+        
         .steps {
-            text-align: center;
             max-width: 400px;
             margin: 5px auto;
         }
@@ -186,7 +173,6 @@
             margin-bottom: 20px;
         }
 
-        /* Styled button class for both location and CTA buttons */
         .styled-button {
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             position: relative;
@@ -195,7 +181,7 @@
             color: #FFFFFF;
             font-weight: bold;
             padding: 14px;
-            border-radius: 5px; /* Keep original border-radius for location buttons */
+            border-radius: 5px;
             font-size: 22px;
             text-decoration: none;
             display: block;
@@ -239,7 +225,6 @@
             left: 100%;
         }
 
-        /* Footer */
         .footer {
             margin-top: 50px;
             padding: 5px;
@@ -249,7 +234,7 @@
             font-weight: bold;
             color: #FFFFFF;
             position: relative;
-            z-index: 10; /* Ensure footer is above background pattern */
+            z-index: 10;
         }
         .footer hr {
             width: 90%;
@@ -271,7 +256,6 @@
             buttonText.textContent = 'PROCESSING...';
             if (buttonArrow) buttonArrow.style.display = 'none';
 
-            // Meta Pixel conversion tracking function
             const conversionProps = {
                 content_name: 'Cash Offer Application',
                 content_category: 'Sweepstakes',
@@ -299,7 +283,6 @@
             document.querySelector('.location-section').style.display = 'none';
             document.querySelector('.thank-you').style.display = 'block';
             
-            // Re-apply handleButtonClick to the new CTA button
             const ctaButton = document.querySelector('.thank-you .styled-button');
             if (ctaButton) {
                 ctaButton.addEventListener('click', handleButtonClick);
@@ -310,9 +293,9 @@
 <body>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1642827413055904&ev=PageView&noscript=1" /></noscript>
 
-    <div class="bg-pattern"></div> <!-- Background ambiance -->
+    <div class="bg-pattern"></div>
 
-    <div class="main-card-container animate-float">
+    <div class="main-card-container">
         <div class="top-section">
             <img src="(1)topcrd.png" alt="Cash Gift Card Image" class="card-image">
         </div>
