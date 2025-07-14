@@ -47,7 +47,8 @@
         h1 {
             color: #FFFFFF; /* White for main title */
             font-size: 28px;
-            margin-bottom: 20px;
+            margin-top: 10px; /* Reduced margin */
+            margin-bottom: 10px; /* Reduced margin */
         }
         h1 span {
             color: #00D632; /* Freecash green */
@@ -56,7 +57,7 @@
         .steps {
             text-align: center;
             max-width: 400px;
-            margin: 5px auto;
+            margin: 5px auto; /* Reduced margin */
         }
         .steps ol {
             padding-left: 0;
@@ -65,7 +66,7 @@
         .steps ol li {
             font-size: 16px;
             font-weight: 700;
-            margin: 10px 0;
+            margin: 5px 0;
             color: #FFFFFF; /* White text for steps */
             white-space: normal;
             overflow: visible;
@@ -95,13 +96,13 @@
             background: #00B02A; /* Darker green on hover */
         }
         .location-section {
-            margin-top: 5px;
+            margin-top: 5px; /* Reduced margin */
             display: block; /* Explicitly set to block for default visibility */
         }
         .location-btn {
             display: block;
             width: 90%;
-            margin: 5px auto;
+            margin: 5px auto; /* Reduced margin */
             background: #00D632; /* Freecash green */
             color: #1A1A1A; /* Dark text for green button */
             font-size: 22px;
@@ -127,7 +128,7 @@
         
         /* Footer */
         .footer {
-            margin-top: 50px;
+            margin-top: 10px; /* Drastically reduced margin to pull up footer */
             padding: 5px;
             background: #1A1A1A; /* Dark background for footer */
             text-align: center;
@@ -141,52 +142,6 @@
             margin: 20px auto;
         }
 
-        /* Freecash specific stats/elements */
-        .stats-section {
-            margin-top: 30px;
-            padding: 15px;
-            background-color: #2A2A2A; /* Slightly lighter dark background for stats */
-            border-radius: 10px;
-            color: #FFFFFF;
-        }
-        .stat-item {
-            margin-bottom: 10px;
-        }
-        .stat-value {
-            font-size: 1.2em;
-            font-weight: 700;
-            color: #00D632; /* Freecash green for values */
-        }
-        .stat-label {
-            font-size: 0.9em;
-            color: #CCCCCC;
-        }
-        .trustpilot-section {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #FFFFFF;
-        }
-        .trustpilot-logo {
-            max-width: 120px;
-            margin-bottom: 10px;
-        }
-        .star-rating-freecash {
-            display: flex;
-            gap: 2px;
-            margin-bottom: 5px;
-        }
-        .star-rating-freecash svg {
-            width: 20px;
-            height: 20px;
-            fill: #00B67A; /* Trustpilot green star color */
-        }
-        .reviews-count {
-            font-size: 0.9em;
-            color: #CCCCCC;
-        }
     </style>
     <script>
         function showThankYou() {
@@ -210,39 +165,11 @@
     <div class="main-content">
         <h1>HOW IT WORKS</h1>
         
-        <div class="stats-section">
-            <div class="stat-item">
-                <span class="stat-value">Up to $3,000</span> <span class="stat-label">per offer</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-value">12,983</span> <span class="stat-label">Offers available now</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-value">718,590+</span> <span class="stat-label">sign ups in the past 24 hours</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-value">$50,000,000+</span> <span class="stat-label">Total amount earned on Freecash</span>
-            </div>
-        </div>
-
-        <div class="trustpilot-section">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Trustpilot_logo.png" alt="Trustpilot Logo" class="trustpilot-logo">
-            <div class="star-rating-freecash">
-                <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
-                <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
-                <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
-                <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
-                <svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon></svg>
-            </div>
-            <span class="reviews-count">See our 193,942 reviews on Trustpilot</span>
-        </div>
-
         <div class="steps">
             <ol>
                 <li class="first-step">Choose A Region Below📍</li>
-                <li>Choose an offer from thousands of options</li>
-                <li>Complete the offer (takes 5-10 minutes!)</li>
-                <li>Get paid instantly!</li>
+                <li>Earn More By Testing Multiple Games/Deals (<span style="color: #000000;">Make Over $100/Day!</span>)🚨</li>
+                <li>Cash Out And Repeat💸</li>
             </ol>
         </div>
         
