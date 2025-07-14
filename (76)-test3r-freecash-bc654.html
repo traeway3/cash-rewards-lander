@@ -13,10 +13,8 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            /* Changed to solid color as requested, but also showing gradient option */
-            background-color: #141524; /* Updated background color */
-            /* If you prefer a subtle gradient, uncomment the line below and comment out background-color */
-            /* background: linear-gradient(to bottom, #141524, #0A0B10); */
+            /* Changed to a gradient for the entire body */
+            background: linear-gradient(to bottom, #141524, #0A0B10); /* Unified gradient for the whole page */
             overflow-x: hidden;
         }
 
@@ -39,7 +37,7 @@
         
         /* Main Content Area */
         .main-content {
-            background: transparent;
+            background: transparent; /* This will now let the body gradient show through */
             padding: 10px;
             margin: 0 auto;
             max-width: 90%;
@@ -132,7 +130,8 @@
         .footer {
             margin-top: 10px; /* Drastically reduced margin to pull up footer */
             padding: 5px;
-            background: #1A1A1A; /* Dark background for footer */
+            /* Removed specific background here, as body will now provide the gradient */
+            background: transparent; /* Allow the body's gradient to show through */
             text-align: center;
             font-size: 14px;
             font-weight: bold;
