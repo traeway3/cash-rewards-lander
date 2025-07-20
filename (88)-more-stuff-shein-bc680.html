@@ -13,8 +13,8 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            /* Changed to a gradient for the entire body */
-            background: linear-gradient(to bottom, #141524, #0A0B10); /* Unified gradient for the whole page */
+            /* Changed to a very subtle warm white */
+            background-color: #FFFFF0; /* Subtle, slightly warmer white */
             overflow-x: hidden;
         }
 
@@ -37,21 +37,21 @@
         
         /* Main Content Area */
         .main-content {
-            background: transparent; /* This will now let the body gradient show through */
+            background: transparent; /* This will now let the body background show through */
             padding: 10px;
             margin: 0 auto;
             max-width: 90%;
-            color: #FFFFFF; /* White text for dark background */
+            color: #000000; /* Changed text color to black for contrast on light background */
         }
 
         /* Text and Steps */
         h1 {
-            color: #FFFFFF; /* White for main title */
+            color: #000000; /* Changed for contrast on light background */
             font-size: 28px;
             margin-bottom: 20px;
         }
         h1 span {
-            color: #FF8B80; /* Changed to #FF8B80 */
+            color: #FF8B80; /* Remains #FF8B80 */
             font-weight: bold;
         }
         .steps {
@@ -67,13 +67,13 @@
             font-size: 16px;
             font-weight: 700;
             margin: 10px 0;
-            color: #FFFFFF; /* White text for steps */
+            color: #000000; /* Changed for contrast on light background */
             white-space: normal;
             overflow: visible;
             text-overflow: clip;
         }
         .steps ol li::marker {
-            color: #FF8B80; /* Changed to #FF8B80 */
+            color: #FF8B80; /* Remains #FF8B80 */
             font-weight: bold;
         }
 
@@ -82,7 +82,7 @@
             display: none;
             width: 90%;
             margin: 5px auto;
-            background: #FF8B80; /* Changed to #FF8B80 */
+            background: #FF8B80; /* Remains #FF8B80 */
             color: #1A1A1A; /* Dark text for button */
             font-size: 22px;
             font-weight: bold;
@@ -93,7 +93,7 @@
             text-decoration: none;
         }
         .cta-btn:hover {
-            background: #E87A70; /* Slightly darker shade of #FF8B80 for hover */
+            background: #E87A70; /* Remains slightly darker shade of #FF8B80 for hover */
         }
         .location-section {
             margin-top: 5px; /* Reduced margin */
@@ -103,7 +103,7 @@
             display: block;
             width: 90%;
             margin: 5px auto;
-            background: #FF8B80; /* Changed to #FF8B80 */
+            background: #FF8B80; /* Remains #FF8B80 */
             color: #1A1A1A; /* Dark text for button */
             font-size: 22px;
             font-weight: bold;
@@ -114,7 +114,7 @@
             text-decoration: none;
         }
         .location-btn:hover {
-            background: #E87A70; /* Slightly darker shade of #FF8B80 for hover */
+            background: #E87A70; /* Remains slightly darker shade of #FF8B80 for hover */
         }
         .thank-you {
             display: none;
@@ -130,15 +130,15 @@
         .footer {
             margin-top: 10px; /* Drastically reduced margin to pull up footer */
             padding: 5px;
-            background: transparent; /* Allow the body's gradient to show through */
+            background: transparent; /* Allow the body's background to show through */
             text-align: center;
             font-size: 14px;
             font-weight: bold;
-            color: #FFFFFF; /* White text for footer */
+            color: #000000; /* Changed for contrast on light background */
         }
         .footer hr {
             width: 90%;
-            border: 1px solid #333333; /* Darker border for contrast */
+            border: 1px solid #666666; /* Slightly lighter border for contrast on light background */
             margin: 20px auto;
         }
 
