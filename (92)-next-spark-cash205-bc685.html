@@ -133,6 +133,20 @@
             border: 1px solid black;
             margin: 20px auto;
         }
+        /* Trust Signals Styling */
+        .trust-signals {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            gap: 5px; /* Space between icon and text */
+        }
+        .trust-signals .icon {
+            font-size: 14px; /* Adjust icon size */
+            line-height: 1; /* Align icon with text */
+        }
     </style>
     <script>
         function showThankYou() {
@@ -159,7 +173,7 @@
             <ol>
                 <li class="first-step">Choose A Region Below📍</li>
                 <li>Fill Out Some Basic Questions✍️</li>
-                <li>Start Earning Right After Completing 3-5 Deals (<span style="color: #00d632;">IMPORTANT</span>)🚨</li>
+                <li>Start Earning Right After Completing 3-5 Games/App Deals (<span style="color: #00d632;">IMPORTANT</span>)🚨</li>
                 <li>Cash Out And Repeat Anytime!💸</li>
             </ol>
         </div>
@@ -178,6 +192,9 @@
     <div class="footer">
         <hr>
         <p>HUGE TIP: THE MORE DEALS YOU COMPLETE, THE MORE YOU EARN!</p>
+        <div class="trust-signals">
+            <span class="icon">🔒</span> Secure Connection &nbsp;|&nbsp; Your Data is Protected
+        </div>
     </div>
 </body>
 </html>
