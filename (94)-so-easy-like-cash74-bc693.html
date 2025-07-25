@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your $750 Cash Now!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;700&display=swap');
+        
+        /* General Body and Layout */
+        body {
+            font-family: 'Canva Sans', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F8F8; /* Changed to a very subtle off-white */
+            overflow-x: hidden;
+        }
+
+        /* Top Section and Images */
+        .top-section {
+            background: url('(6)cshbackground.png') no-repeat center center; /* Updated background image */
+            background-size: cover;
+            width: 100vw;
+            height: auto;
+            padding: 30px 0;
+        }
+        .card-image {
+            max-width: 50%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Main Content Area */
+        .main-content {
+            background: transparent;
+            padding: 10px;
+            margin: 0 auto;
+            max-width: 90%;
+        }
+
+        /* Text and Steps */
+        h1 span {
+            color: #00d632;
+            font-weight: bold;
+        }
+        .steps {
+            text-align: center;
+            max-width: 400px;
+            margin: 5px auto;
+        }
+        .steps ol {
+            padding-left: 0;
+            list-style-position: inside;
+        }
+        .steps ol li {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 5px 0;
+            color: #000000;
+            white-space: normal;
+            overflow: visible;
+            text-overflow: clip;
+        }
+        .steps ol li::marker {
+            color: #00d632;
+            font-weight: bold;
+        }
+
+        /* Buttons and Location Section */
+        .cta-btn {
+            display: none;
+            width: 90%;
+            margin: 5px auto;
+            background: #00d632;
+            color: #FFFFFF;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .cta-btn:hover {
+            background: #00b02a;
+        }
+        .location-section {
+            margin-top: 5px;
+        }
+        .location-btn {
+            display: block;
+            width: 90%;
+            margin: 5px auto;
+            background: #00d632;
+            color: #FFFFFF;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .location-btn:hover {
+            background: #00b02a;
+        }
+        .thank-you {
+            display: none;
+            margin-top: 5px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            padding: 5px;
+            background: #F8F8F8; /* Changed to match body background */
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+        .footer hr {
+            width: 90%;
+            border: 1px solid black;
+            margin: 20px auto;
+        }
+        /* Trust Signals Styling */
+        .trust-signals {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            gap: 5px; /* Space between icon and text */
+        }
+        .trust-signals .icon {
+            font-size: 14px; /* Adjust icon size */
+            line-height: 1; /* Align icon with text */
+        }
+    </style>
+    <script>
+        function showThankYou() {
+            document.querySelector('.location-section').style.display = 'none';
+            document.querySelector('.thank-you').style.display = 'block';
+            document.querySelector('.cta-btn').style.display = 'block';
+            
+            // Change text of first list item
+            const firstStep = document.querySelector('.steps ol li.first-step');
+            if (firstStep) {
+                firstStep.innerHTML = "Click Below To Start Today👇";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="top-section">
+        <img src="(6)cashcrdtop.png" alt="Cash Gift Card Image" class="card-image"> </div>
+    
+    <div class="main-content">
+        <h1>HOW IT WORKS</h1>
+        
+        <div class="steps">
+            <ol>
+                <li class="first-step">Choose A Region Below📍</li>
+                <li>Fill Out Some Basic Questions✍️</li>
+                <li>Start Earning Right After Completing 3-5 Games/App Deals (<span style="color: #00d632;">IMPORTANT</span>)🚨</li>
+                <li>Cash Out And Repeat Anytime!💸</li>
+            </ol>
+        </div>
+        
+        <div class="location-section">
+            <h2>Where Are You Located?</h2>
+            <button class="location-btn" onclick="showThankYou()">United States</button>
+            <button class="location-btn" onclick="showThankYou()">Canada</button>
+        </div>
+        
+        <div class="thank-you">
+            <h2>Start Here!👇</h2>
+            <a href="https://rewarduplevel.com/aff_c?offer_id=74&aff_id=27696&source=94-so-easy-like-cash74-bc693" class="cta-btn">START EARNING NOW!</a> </div>
+    </div>
+
+    <div class="footer">
+        <hr>
+        <p>HUGE TIP: THE MORE DEALS YOU COMPLETE, THE MORE YOU EARN!</p>
+        <div class="trust-signals">
+            <span class="icon">🔒</span> Secure Connection &nbsp;|&nbsp; Your Data is Protected
+        </div>
+    </div>
+</body>
+</html>
