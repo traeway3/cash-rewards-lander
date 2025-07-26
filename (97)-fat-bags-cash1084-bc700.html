@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$ Claim Your Free $750</title>
+    <style>
+        /* Basic Reset & Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background-color: #f0f0f0; /* Light grey background to match image */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            color: #333;
+        }
+
+        /* Main Container for content width */
+        .container {
+            width: 100%;
+            max-width: 400px; /* Adjust max-width to visually match screenshot */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Top Section - Dollar Sign and Title */
+        .header {
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .header .app-logo { /* Changed from .dollar-icon */
+            width: 70px; /* Adjust size as needed */
+            height: 70px; /* Adjust size as needed */
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin: 0;
+            color: #333;
+        }
+
+        .header h1 span {
+            color: #00D632; /* Green for $750 - updated to #00D632 */
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Steps Section */
+        .steps-container {
+            background-color: #FFFFFF; /* White background for the steps block */
+            border-radius: 15px;
+            padding: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee; /* Separator line */
+        }
+
+        .step-item:last-child {
+            border-bottom: none; /* No border for the last item */
+        }
+
+        .step-item.active {
+            background-color: #e8ffe8; /* Light green background for active step */
+            border-radius: 10px; /* Rounded corners for active step */
+            margin: 0 5px; /* Adjust margin to pull it in slightly for the rounded corners to show */
+        }
+
+        .step-icon {
+            font-size: 24px;
+            color: #00D632; /* Green icon - updated to #00D632 */
+            margin-right: 15px;
+            line-height: 1; /* For consistent vertical alignment */
+            width: 30px; /* Fixed width for alignment */
+            text-align: center;
+        }
+        
+        /* Specific icon adjustments for visual match */
+        .step-icon.dollar {
+            font-size: 20px; /* Slightly smaller for the dollar sign */
+        }
+        .step-icon.dot {
+            font-size: 10px; /* Size for the small green dot */
+            color: #00D632; /* Updated to #00D632 */
+            line-height: 1;
+            margin-left: auto; /* Push to the right */
+            margin-right: 0;
+            width: auto; /* Remove fixed width */
+        }
+
+
+        .step-text {
+            flex-grow: 1;
+        }
+
+        .step-text .step-number {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 2px;
+        }
+
+        .step-text .step-description {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Claim Button */
+        .claim-btn {
+            display: block;
+            width: 90%;
+            max-width: 350px; /* Keep consistent with container max-width */
+            margin: 30px auto 20px auto;
+            background-color: #00D632; /* Green button - updated to #00D632 */
+            color: #FFFFFF;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 18px 20px;
+            border: none;
+            border-radius: 10px; /* Rounded corners for button */
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .claim-btn:hover {
+            background-color: #00b02a; /* Slightly darker green on hover, close to #00D632 */
+        }
+
+        /* Footer Disclaimer */
+        .disclaimer {
+            font-size: 13px;
+            color: #888;
+            margin: 0 20px 30px 20px; /* Adjust margin for overall page fit */
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="cshapplogo.png" alt="Cash App Logo" class="app-logo"> <h1>$ Claim Your Free <span>$750</span></h1>
+            <p>Complete these steps to get your cash reward</p>
+        </div>
+
+        <div class="steps-container">
+            <div class="step-item active">
+                <span class="step-icon">📄</span>
+                <div class="step-text">
+                    <div class="step-number">Step 1</div>
+                    <div class="step-description">Answer Quick Questions</div>
+                </div>
+                <span class="step-icon dot">●</span>
+            </div>
+            <div class="step-item">
+                <span class="step-icon">👤</span>
+                <div class="step-text">
+                    <div class="step-number">Step 2</div>
+                    <div class="step-description">Enter Your Information</div>
+                </div>
+            </div>
+            <div class="step-item">
+                <span class="step-icon dollar">$</span>
+                <div class="step-text">
+                    <div class="step-number">Step 3</div>
+                    <div class="step-description">Complete Partner Offers</div>
+                </div>
+            </div>
+            <div class="step-item">
+                <span class="step-icon">🔄</span>
+                <div class="step-text">
+                    <div class="step-number">Step 4</div>
+                    <div class="step-description">Claim & Repeat</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://rewarduplevel.com/aff_c?offer_id=1084&aff_id=27696&source=97-fat-bags-cash1084-bc700" class="claim-btn">Claim Now!</a>
+
+        <p class="disclaimer">By continuing, you agree to complete partner offers. Offer valid for new members only.</p>
+    </div>
+</body>
+</html>
