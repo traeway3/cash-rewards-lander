@@ -234,7 +234,9 @@
             max-width: 300px; /* Slightly smaller max-width */
             position: relative;
             overflow: hidden;
-            margin: 0 auto; /* Centered */
+            margin: 0 auto; /* Ensures centering as a block element */
+            text-align: center; /* Centers the text inside the button */
+            display: block; /* Make it a block element to respect margin: auto */
         }
         
         .cta-button:active {
@@ -465,7 +467,7 @@
             
             const ctaButton = document.querySelector('.cta-button');
             if (ctaButton) {
-                ctaButton.style.display = 'inline-block'; // Show the CTA button
+                ctaButton.style.display = 'block'; // Changed to block for centering
             }
         }
 
