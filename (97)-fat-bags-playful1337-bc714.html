@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Congratulations! You've been selected for an exclusive Playful reward. Complete simple tasks to claim your reward.">
+    <meta name="keywords" content="Playful, reward, games, earn, money, exclusive offer">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Playful Rewards - Start Earning Now!</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            font-size: 14px;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #F5F5F7; /* Neutral background */
+            color: #2D2D2D;
+            line-height: 1.5;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+        
+        /* Header Section */
+        .header {
+            padding: 20px 0 10px; /* Reduced padding to lift content */
+            text-align: center;
+        }
+        
+        .logo-pill { 
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 1px solid #DEE2E6;
+            border-radius: 50px;
+            padding: 6px 12px; /* Reduced padding */
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+        }
+        
+        .app-logo { 
+            width: 50px; /* Slightly smaller logo */
+            height: auto;
+            display: block;
+        }
+        
+        /* Hero Section - Adapted for Playful */
+        .hero {
+            padding: 10px 0 15px; /* Reduced padding */
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: 2rem; /* Slightly smaller font size */
+            font-weight: 800;
+            color: #2D2D2D;
+            margin-bottom: 12px; /* Reduced margin */
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px; /* Reduced margin */
+            flex-wrap: nowrap; /* Prevent wrapping */
+            gap: 8px; /* Reduced gap */
+        }
+        
+        .party-icon {
+            font-size: 1.3rem; /* Slightly smaller emoji */
+        }
+        
+        .reward-text {
+            font-size: 1.2rem; /* Slightly smaller font size */
+            font-weight: 700;
+            background: linear-gradient(135deg, #4002ED, #6A00FF); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: 0.9rem; /* Slightly smaller font size */
+            color: #4A5568;
+            margin-bottom: 15px; /* Reduced margin */
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        /* How It Works Section */
+        .how-it-works {
+            padding: 10px 0 15px; /* Reduced padding */
+        }
+        
+        .section-title {
+            font-size: 1.4rem; /* Slightly smaller font size */
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 15px; /* Reduced margin */
+            color: #2D2D2D;
+        }
+        
+        .steps-container {
+            max-width: 420px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px; /* Reduced margin */
+            padding: 10px; /* Reduced padding */
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+            border: 1px solid #E5E5E7;
+        }
+        
+        .step-number {
+            flex-shrink: 0;
+            width: 36px; /* Slightly smaller */
+            height: 36px; /* Slightly smaller */
+            background: linear-gradient(135deg, #4002ED, #6A00FF); 
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem; /* Slightly smaller */
+            margin-right: 12px; /* Reduced margin */
+        }
+        
+        .step-content {
+            flex: 1;
+            padding-top: 4px; /* Reduced padding */
+        }
+        
+        .step-text {
+            font-size: 0.85rem; /* Slightly smaller */
+            font-weight: 600;
+            color: #2D2D2D;
+            margin-bottom: 2px; /* Reduced margin */
+            line-height: 1.4;
+        }
+        
+        .step-subtext {
+            font-size: 0.75rem; /* Slightly smaller */
+            color: #6B7280;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        
+        /* Location Section (for initial state, only on specific conditions) */
+        .location-section {
+            margin-top: 10px; /* Adjusted margin to push buttons up */
+        }
+        .location-btn {
+            display: block;
+            width: 90%;
+            margin: 5px auto;
+            background: #4002ed; /* Playful purple */
+            color: #FFFFFF;
+            font-size: 1.1rem; /* Slightly smaller font size */
+            font-weight: bold;
+            padding: 12px; /* Reduced padding */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .location-btn:hover {
+            background: #2e01a8; /* Darker purple on hover */
+        }
+
+        /* Thank You / Final CTA Section */
+        .thank-you {
+            display: none; /* Hidden by default, shown by JS */
+            margin-top: 5px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .thank-you h2 {
+            font-size: 1.1rem; /* Slightly smaller font size */
+            font-weight: 700;
+            color: #2D2D2D;
+            margin-bottom: 10px; /* Reduced margin */
+            text-align: center; /* Centered */
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: none; /* Hidden by default, shown by JS */
+            background: linear-gradient(135deg, #4002ED, #6A00FF); /* Playful purple gradient */
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 15px 25px; /* Reduced padding */
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 3px 16px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px; /* Slightly smaller max-width */
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto; /* Ensures centering as a block element */
+            text-align: center; /* Centers the text inside the button */
+            display: block; /* Make it a block element to respect margin: auto */
+        }
+        
+        .cta-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:active::before {
+            left: 100%;
+        }
+        
+        .cta-microcopy {
+            font-size: 0.8rem;
+            color: #6B7280;
+            margin-top: 8px; /* Reduced margin */
+            font-weight: 500;
+            text-align: center; /* Centered */
+        }
+        
+        /* Footer Section */
+        .footer {
+            padding: 15px 0 15px; /* Reduced padding */
+            text-align: center;
+            margin-top: 10px; /* Reduced margin */
+        }
+        
+        .footer-text { 
+            font-size: 0.8rem;
+            color: #9CA3AF;
+            font-weight: 600;
+            margin-bottom: 5px; 
+        }
+        
+        .geo-restriction {
+            font-size: 0.7rem;
+            color: #6B7280;
+            font-weight: 500;
+            margin-bottom: 8px; /* Reduced margin */
+            line-height: 1.4;
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .legal-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; /* Reduced gap */
+            flex-wrap: wrap;
+        }
+        
+        .legal-link {
+            font-size: 0.7rem;
+            color: #9CA3AF;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .legal-link:active {
+            color: #2D2D2D;
+        }
+        
+        .legal-separator {
+            color: #D1D5DB;
+            font-size: 0.7rem;
+        }
+        
+        /* Responsive Design Adjustments */
+        @media (min-width: 375px) {
+            .hero-title { font-size: 2.3rem; }
+            .reward-text { font-size: 1.3rem; }
+            .hero-description { font-size: 1rem; }
+            .section-title { font-size: 1.5rem; }
+            .location-btn { font-size: 1.2rem; padding: 14px; }
+            .cta-button { max-width: 320px; }
+        }
+        
+        @media (min-width: 414px) {
+            .hero-title { font-size: 2.5rem; }
+            .reward-text { font-size: 1.4rem; }
+            .hero-description { font-size: 1.05rem; }
+            .section-title { font-size: 1.6rem; }
+            .location-btn { font-size: 1.3rem; padding: 16px; }
+            .cta-button { max-width: 340px; }
+        }
+        
+        @media (min-width: 768px) {
+            .hero-title { font-size: 2.8rem; }
+            .reward-text { font-size: 1.5rem; }
+            .hero-description { font-size: 1.1rem; }
+            .section-title { font-size: 1.7rem; }
+            .location-btn { font-size: 1.4rem; padding: 18px; }
+            .cta-button { max-width: 360px; }
+        }
+
+        /* Performance Optimizations */
+        .step, .cta-button, .logo-pill {
+            will-change: transform;
+        }
+        
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Focus styles for accessibility */
+        .cta-button:focus {
+            outline: 3px solid #93C5FD;
+            outline-offset: 2px;
+        }
+        
+        .legal-link:focus {
+            outline: 2px solid #93C5FD;
+            outline-offset: 1px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-pill">
+                <img src="(3)playfullogo.png" alt="Playful App Logo" class="app-logo">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Welcome to Playful!</h1>
+            
+            <div class="hero-subtitle">
+                <span class="party-icon">🎉</span>
+                <span class="reward-text">Start Playing, Start Earning!</span>
+                <span class="party-icon">🎉</span>
+            </div>
+
+            <p class="hero-description">
+                Join thousands who are earning rewards by playing games.
+            </p>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-text">Choose A Region Below📍</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-text">Complete the required games/app deals🚨</div>
+                        <div class="step-subtext">(The more games you play, the higher your reward)</div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-text">Cash out and Repeat💸</div>
+                        <div class="step-subtext">(Earn up to an extra $100/day!)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="location-section">
+        <button class="location-btn" onclick="showThankYou('United States')">United States</button>
+        <button class="location-btn" onclick="showThankYou('Canada')">Canada</button>
+    </div>
+
+    <section class="cta-section thank-you" style="display: none;">
+        <div class="container">
+            <h2>Thank you! Click below to start earning👇</h2>
+            <a href="https://rewarduplevel.com/aff_c?offer_id=1337&aff_id=27696&source=97-fat-bags-playful1337-bc714" class="cta-button" role="button" aria-label="Start earning now">
+                START EARNING NOW!
+            </a>
+            <p class="cta-microcopy">Takes less than 60 seconds to start.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">COPYRIGHT 2024 ©</p>
+            
+            <p class="geo-restriction">
+                Offer only available exclusively to residents of the US, UK, AU, & CA.
+            </p>
+            
+            <div class="legal-links">
+                <a href="#" class="legal-link">Terms & Conditions</a>
+                <span class="legal-separator">•</span>
+                <a href="#" class="legal-link">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showThankYou(region) {
+            document.querySelector('.location-section').style.display = 'none';
+            document.querySelector('.thank-you').style.display = 'block';
+            
+            const firstStepText = document.querySelector('.steps-container .step:first-child .step-text');
+            if (firstStepText) {
+                firstStepText.innerHTML = 'Download the Playful app👇';
+            }
+            
+            const ctaButton = document.querySelector('.cta-button');
+            if (ctaButton) {
+                ctaButton.style.display = 'block'; // Changed to block for centering
+            }
+        }
+
+        // Set viewport height for mobile browsers
+        function setVH() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', setVH);
+
+        // Preload critical resources and CTA tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            document.documentElement.style.scrollBehavior = 'smooth';
+            const ctaButton = document.querySelector('.cta-button');
+            if (ctaButton) {
+                ctaButton.addEventListener('click', function(e) {
+                    console.log('CTA button clicked - redirecting to:', this.href);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
