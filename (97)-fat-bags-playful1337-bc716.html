@@ -37,19 +37,27 @@
             -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Top Section for Logo/Branding as background */
+        /* Top Section with Background Image and Foreground Logo */
         .top-section {
-            background: url('(3)Playfullogo.jpg') no-repeat center center; /* Using image as background */
+            background: url('(2) Playful Backimg.png') no-repeat center center; /* Background image */
             background-size: cover; /* Ensures it covers the entire area */
-            padding: 10px 0 5px;
+            padding: 10px 0 5px; /* Padding for the entire section */
             text-align: center;
-            height: 160px; /* Set a fixed height for the background area */
-            display: flex; /* Kept flex properties in case content is added later */
-            align-items: center;
-            justify-content: center;
+            height: 160px; /* Fixed height for the section */
+            display: flex;
+            align-items: center; /* Vertically center the logo */
+            justify-content: center; /* Horizontally center the logo */
         }
         
-        /* .app-logo removed as the image is now a background */
+        .app-logo { 
+            max-width: 160px; /* Size for the foreground logo */
+            height: auto;
+            display: block;
+            margin: 0; /* Override any default margin */
+            padding: 5px; /* Small padding around the logo */
+            background-color: rgba(255, 255, 255, 0.7); /* Slight background to make logo pop on busy background */
+            border-radius: 10px; /* Slightly rounded corners for the logo's background */
+        }
 
         /* Main Content Section */
         .main-content {
@@ -293,7 +301,7 @@
             .cta-button { font-size: 1.2rem; padding: 10px 18px; max-width: 280px; }
             .cta-microcopy { font-size: 0.75rem; }
             .huge-tip { font-size: 0.8rem; }
-            .top-section { height: 140px; } /* Smaller height for very small screens */
+            .top-section { height: 140px; }
         }
 
         @media (min-width: 375px) {
@@ -323,7 +331,7 @@
         }
         
         /* Performance Optimizations */
-        .step, .cta-button {
+        .step, .cta-button, .app-logo {
             will-change: transform, box-shadow;
         }
         
@@ -350,7 +358,7 @@
 </head>
 <body>
     <div class="top-section">
-        </div>
+        <img src="4Playfullogo.png" alt="Playful App Logo" class="app-logo"> </div>
 
     <div class="main-content">
         <h1 class="hero-title">START PLAYING, START EARNING!</h1>
