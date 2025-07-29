@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="Welcome to Playful! Start earning rewards by playing games. Download the app and cash out!">
+    <meta name="description" content="Start playing, start earning rewards by completing engaging mobile games. Download the Playful app and cash out!">
     <meta name="keywords" content="Playful, reward, games, earn, money, app, download">
     <meta name="robots" content="noindex, nofollow">
-    <title>Playful - How It Works</title>
+    <title>Playful - Start Earning Now!</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +27,9 @@
         }
         
         body {
-            font-family: 'Canva Sans', sans-serif; /* Primary font from successful lander */
+            font-family: 'Canva Sans', sans-serif;
             text-align: center;
-            background: #FFFFFF; /* White background from successful lander */
+            background: #FFFFFB; /* Very subtle warmer white */
             color: #2D2D2D;
             line-height: 1.5;
             overflow-x: hidden;
@@ -37,15 +37,20 @@
             -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Top Section for Logo/Branding - Adapted from Tester Up */
+        /* Top Section for Logo/Branding */
         .top-section {
-            background: #F5F5F7; /* Neutral background to blend with Poppins header if used */
+            background: url('(2) Playful Backimg.jpg') no-repeat center center; /* Updated background image */
+            background-size: cover;
             padding: 20px 0 10px;
             text-align: center;
+            height: 180px; /* Increased height to make logo more prominent within the background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .app-logo { 
-            max-width: 150px; /* Adjust size as needed for Playful logo */
+            max-width: 200px; /* Increased logo size */
             height: auto;
             display: block;
             margin: 0 auto;
@@ -54,74 +59,74 @@
         /* Main Content Section */
         .main-content {
             background: transparent;
-            padding: 10px 16px; /* Added horizontal padding */
+            padding: 10px 16px;
             margin: 0 auto;
             max-width: 90%;
-            display: flex; /* Use flexbox for vertical centering and spacing */
+            display: flex;
             flex-direction: column;
             align-items: center;
         }
         
-        h1 {
-            font-family: 'Poppins', sans-serif; /* Poppins for main title for modern feel */
+        .hero-title { /* Updated headline */
+            font-family: 'Poppins', sans-serif;
             font-size: 2rem;
             font-weight: 800;
             color: #2D2D2D;
-            margin-bottom: 12px;
+            margin-bottom: 15px; /* Adjusted margin */
             line-height: 1.1;
         }
 
         .section-title {
-            font-family: 'Canva Sans', sans-serif; /* Bold font for "HOW IT WORKS" */
-            font-size: 1.8rem; /* Larger for prominence */
+            font-family: 'Canva Sans', sans-serif;
+            font-size: 1.8rem;
             font-weight: 700;
             text-align: center;
-            margin-top: 20px; /* Space from above content */
-            margin-bottom: 20px; /* Space before steps */
+            margin-top: 15px; /* Adjusted margin */
+            margin-bottom: 20px;
             color: #2D2D2D;
         }
         
         .steps-container {
             max-width: 420px;
-            width: 100%; /* Ensure it takes full width within max-width */
+            width: 100%;
             margin: 0 auto;
         }
         
         .step {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 10px; /* Adjusted margin for better spacing */
-            padding: 12px; /* Slightly more padding */
+            margin-bottom: 10px;
+            padding: 12px;
             background: white;
-            border-radius: 8px; /* Slightly more rounded corners */
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Softer shadow */
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             border: 1px solid #E5E5E7;
         }
         
         .step-number {
             flex-shrink: 0;
-            width: 40px; /* Slightly larger number bubble */
-            height: 40px; /* Slightly larger number bubble */
-            background: #6A00FF; /* Playful purple */
+            width: 40px;
+            height: 40px;
+            background: #4002EE; /* Updated blue color */
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: 700;
-            font-size: 1.1rem; /* Larger font for numbers */
-            margin-right: 15px; /* More space */
+            font-size: 1.1rem;
+            margin-right: 15px;
         }
         
         .step-content {
             flex: 1;
             padding-top: 2px;
-            text-align: left; /* Align step text to the left */
+            text-align: left;
         }
         
         .step-text {
-            font-family: 'Canva Sans', sans-serif; /* Consistent font for steps */
-            font-size: 1.1rem; /* Larger font size for readability */
+            font-family: 'Canva Sans', sans-serif;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #2D2D2D;
             margin-bottom: 4px;
@@ -129,19 +134,23 @@
         }
         
         .step-subtext {
-            font-family: 'Poppins', sans-serif; /* Poppins for subtext */
+            font-family: 'Poppins', sans-serif;
             font-size: 0.85rem;
             color: #6B7280;
             font-weight: 400;
             line-height: 1.4;
         }
 
-        /* Thank You / CTA Section - Always visible now */
+        .important-color {
+            color: #4002EE; /* Specific color for (IMPORTANT) */
+        }
+
+        /* CTA Section - Always visible */
         .cta-section {
-            margin-top: 30px; /* Increased margin */
-            padding-bottom: 20px; /* Padding before footer */
+            margin-top: 25px; /* Adjusted margin for visibility */
+            padding-bottom: 20px;
             animation: fadeIn 0.5s ease-in-out;
-            width: 100%; /* Ensure it takes full width */
+            width: 100%;
         }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
@@ -149,33 +158,33 @@
         }
         
         .cta-message {
-            font-family: 'Canva Sans', sans-serif; /* Consistent with other bold text */
-            font-size: 1.3rem; /* Prominent message */
+            font-family: 'Canva Sans', sans-serif;
+            font-size: 1.3rem;
             font-weight: 700;
             color: #2D2D2D;
             margin-bottom: 15px;
             text-align: center;
         }
 
-        /* CTA Button - Style from Playful, size from Tester Up */
+        /* CTA Button */
         .cta-button {
-            display: block; /* Always visible */
-            background: linear-gradient(135deg, #4002ED, #6A00FF); /* Playful purple gradient */
+            display: block;
+            background: linear-gradient(135deg, #4002EE, #6A00FF); /* Updated blue color */
             color: white;
-            font-family: 'Canva Sans', sans-serif; /* Bold font for CTA */
-            font-size: 1.5rem; /* Larger font size for impact */
+            font-family: 'Canva Sans', sans-serif;
+            font-size: 1.5rem;
             font-weight: 700;
-            padding: 16px 25px; /* Larger padding */
+            padding: 16px 25px;
             border: none;
-            border-radius: 10px; /* Slightly more rounded */
+            border-radius: 10px;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
             cursor: pointer;
-            width: 90%; /* Match width of successful lander buttons */
-            max-width: 380px; /* Increase max-width for prominence */
+            width: 90%;
+            max-width: 380px;
             margin: 0 auto;
             position: relative;
             overflow: hidden;
@@ -203,7 +212,7 @@
         
         .cta-microcopy {
             font-family: 'Poppins', sans-serif;
-            font-size: 0.9rem; /* Slightly larger */
+            font-size: 0.9rem;
             color: #6B7280;
             margin-top: 10px;
             font-weight: 500;
@@ -212,24 +221,24 @@
         
         /* Footer Section */
         .footer {
-            padding: 20px 0 20px; /* More padding */
+            padding: 20px 0 20px;
             text-align: center;
-            margin-top: 30px; /* More space from above content */
-            background: #f0f0f0; /* Slight background for distinction */
+            margin-top: 30px;
+            background: #FFFFFB; /* Consistent background color */
         }
 
-        .footer hr { /* Added a separator line as in Tester Up */
+        .footer hr {
             width: 80%;
             border: none;
             border-top: 1px solid #ddd;
             margin: 15px auto;
         }
 
-        .huge-tip { /* Style for the "HUGE TIP" from Tester Up */
+        .huge-tip {
             font-family: 'Canva Sans', sans-serif;
             font-size: 1rem;
             font-weight: bold;
-            color: #DB1C15; /* Red color for emphasis */
+            color: #35005F; /* Updated color for HUGE TIP */
             margin-bottom: 15px;
         }
         
@@ -243,7 +252,7 @@
         
         .geo-restriction {
             font-family: 'Poppins', sans-serif;
-            font-size: 0.75rem; /* Slightly larger */
+            font-size: 0.75rem;
             color: #6B7280;
             font-weight: 500;
             margin-bottom: 10px;
@@ -257,13 +266,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 12px; /* Slightly more gap */
+            gap: 12px;
             flex-wrap: wrap;
         }
         
         .legal-link {
             font-family: 'Poppins', sans-serif;
-            font-size: 0.75rem; /* Slightly larger */
+            font-size: 0.75rem;
             color: #9CA3AF;
             text-decoration: none;
             transition: color 0.2s ease;
@@ -280,30 +289,33 @@
         
         /* Responsive Design Adjustments */
         @media (min-width: 375px) {
-            h1 { font-size: 2.3rem; }
+            .hero-title { font-size: 2.3rem; }
             .section-title { font-size: 2rem; }
             .step-text { font-size: 1.2rem; }
             .cta-button { font-size: 1.6rem; padding: 18px 28px; max-width: 400px; }
             .cta-microcopy { font-size: 0.95rem; }
             .huge-tip { font-size: 1.1rem; }
+            .top-section { height: 200px; } /* Adjust height for larger screens */
         }
         
         @media (min-width: 414px) {
-            h1 { font-size: 2.5rem; }
+            .hero-title { font-size: 2.5rem; }
             .section-title { font-size: 2.2rem; }
             .step-text { font-size: 1.3rem; }
             .cta-button { font-size: 1.7rem; padding: 20px 30px; max-width: 420px; }
             .cta-microcopy { font-size: 1rem; }
             .huge-tip { font-size: 1.2rem; }
+            .top-section { height: 220px; }
         }
         
         @media (min-width: 768px) {
-            h1 { font-size: 2.8rem; }
+            .hero-title { font-size: 2.8rem; }
             .section-title { font-size: 2.5rem; }
             .step-text { font-size: 1.4rem; }
             .cta-button { font-size: 1.8rem; padding: 22px 35px; max-width: 450px; }
             .cta-microcopy { font-size: 1.1rem; }
             .huge-tip { font-size: 1.3rem; }
+            .top-section { height: 250px; }
         }
 
         /* Performance Optimizations */
@@ -337,7 +349,7 @@
         <img src="playfullogo.png" alt="Playful App Logo" class="app-logo"> </div>
 
     <div class="main-content">
-        <h1>Welcome to Playful!</h1>
+        <h1 class="hero-title">START PLAYING, START EARNING!</h1>
         
         <h2 class="section-title">HOW IT WORKS</h2>
         
@@ -352,7 +364,7 @@
             <div class="step">
                 <div class="step-number">2</div>
                 <div class="step-content">
-                    <div class="step-text">Complete the required games/app deals🚨</div>
+                    <div class="step-text">Complete many engaging mobile games <span class="important-color">(IMPORTANT)</span>🚨</div>
                     <div class="step-subtext">(The more games you play, the higher your reward)</div>
                 </div>
             </div>
@@ -368,7 +380,7 @@
     </div>
 
     <section class="cta-section">
-        <h2 class="cta-message">Thank you! Click below to start earning👇</h2>
+        <h2 class="cta-message">Click below to start earning👇</h2>
         <a href="https://rewarduplevel.com/aff_c?offer_id=1337&aff_id=27696&source=98-my-reaction-playful1337-bc716" class="cta-button" role="button" aria-label="Start earning now">
             START EARNING NOW!
         </a>
@@ -414,4 +426,4 @@
         });
     </script>
 </body>
-</html>ss
+</html>
