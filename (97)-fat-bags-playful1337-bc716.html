@@ -31,36 +31,30 @@
             text-align: center;
             background: #FFFFFB; /* Very subtle warmer white */
             color: #2D2D2D;
-            line-height: 1.3; /* Adjusted line-height for compactness */
+            line-height: 1.3;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Top Section for Logo/Branding */
+        /* Top Section for Logo/Branding as background */
         .top-section {
-            background: #FFFFFB; /* Matches body background */
-            padding: 10px 0 5px; /* Reduced padding */
+            background: url('(3)Playfullogo.jpg') no-repeat center center; /* Using image as background */
+            background-size: cover; /* Ensures it covers the entire area */
+            padding: 10px 0 5px;
             text-align: center;
-            height: auto; /* Height determined by content */
-            display: flex;
+            height: 160px; /* Set a fixed height for the background area */
+            display: flex; /* Kept flex properties in case content is added later */
             align-items: center;
             justify-content: center;
         }
         
-        .app-logo { 
-            max-width: 160px; /* Adjust size for logo */
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            /* Added padding/margin to prevent logo from touching screen edges too much */
-            padding: 5px; 
-        }
+        /* .app-logo removed as the image is now a background */
 
         /* Main Content Section */
         .main-content {
             background: transparent;
-            padding: 5px 16px; /* Reduced vertical padding */
+            padding: 5px 16px;
             margin: 0 auto;
             max-width: 90%;
             display: flex;
@@ -68,22 +62,22 @@
             align-items: center;
         }
         
-        .hero-title { /* Updated headline */
+        .hero-title {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.8rem; /* Reduced font size for compactness */
+            font-size: 1.8rem;
             font-weight: 800;
             color: #2D2D2D;
-            margin-bottom: 8px; /* Reduced margin */
+            margin-bottom: 8px;
             line-height: 1.1;
         }
 
         .section-title {
             font-family: 'Canva Sans', sans-serif;
-            font-size: 1.5rem; /* Reduced font size for compactness */
+            font-size: 1.5rem;
             font-weight: 700;
             text-align: center;
-            margin-top: 10px; /* Reduced margin */
-            margin-bottom: 15px; /* Reduced margin */
+            margin-top: 10px;
+            margin-bottom: 15px;
             color: #2D2D2D;
         }
         
@@ -96,27 +90,27 @@
         .step {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 8px; /* Reduced margin */
-            padding: 8px; /* Reduced padding for compactness */
+            margin-bottom: 8px;
+            padding: 8px;
             background: white;
-            border-radius: 6px; /* Slightly less rounded */
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03); /* Lighter shadow */
+            border-radius: 6px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
             border: 1px solid #E5E5E7;
         }
         
         .step-number {
             flex-shrink: 0;
-            width: 32px; /* Reduced size */
-            height: 32px; /* Reduced size */
-            background: #4002EE; /* Updated blue color */
+            width: 32px;
+            height: 32px;
+            background: #4002EE;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-weight: 700;
-            font-size: 0.9rem; /* Reduced font size */
-            margin-right: 10px; /* Reduced space */
+            font-size: 0.9rem;
+            margin-right: 10px;
         }
         
         .step-content {
@@ -127,29 +121,29 @@
         
         .step-text {
             font-family: 'Canva Sans', sans-serif;
-            font-size: 0.95rem; /* Reduced font size for compactness */
+            font-size: 0.95rem;
             font-weight: 700;
             color: #2D2D2D;
             margin-bottom: 2px;
-            line-height: 1.2; /* Adjusted line-height */
+            line-height: 1.2;
         }
         
         .step-subtext {
             font-family: 'Poppins', sans-serif;
-            font-size: 0.75rem; /* Reduced font size for compactness */
+            font-size: 0.75rem;
             color: #6B7280;
             font-weight: 400;
-            line-height: 1.3; /* Adjusted line-height */
+            line-height: 1.3;
         }
 
         .important-color {
-            color: #4002EE; /* Specific color for (IMPORTANT) */
+            color: #4002EE;
         }
 
         /* CTA Section - Always visible */
         .cta-section {
-            margin-top: 15px; /* Adjusted margin to push up */
-            padding-bottom: 10px; /* Reduced padding */
+            margin-top: 15px;
+            padding-bottom: 10px;
             animation: fadeIn 0.5s ease-in-out;
             width: 100%;
         }
@@ -160,32 +154,32 @@
         
         .cta-message {
             font-family: 'Canva Sans', sans-serif;
-            font-size: 1.1rem; /* Reduced font size for compactness */
+            font-size: 1.1rem;
             font-weight: 700;
             color: #2D2D2D;
-            margin-bottom: 10px; /* Reduced margin */
+            margin-bottom: 10px;
             text-align: center;
         }
 
         /* CTA Button */
         .cta-button {
             display: block;
-            background: linear-gradient(135deg, #4002EE, #6A00FF); /* Updated blue color */
+            background: linear-gradient(135deg, #4002EE, #6A00FF);
             color: white;
             font-family: 'Canva Sans', sans-serif;
-            font-size: 1.3rem; /* Reduced font size for compactness */
+            font-size: 1.3rem;
             font-weight: 700;
-            padding: 12px 20px; /* Reduced padding */
+            padding: 12px 20px;
             border: none;
-            border-radius: 8px; /* Slightly less rounded */
+            border-radius: 8px;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15); /* Lighter shadow */
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
             cursor: pointer;
             width: 90%;
-            max-width: 320px; /* Reduced max-width for compactness */
+            max-width: 320px;
             margin: 0 auto;
             position: relative;
             overflow: hidden;
@@ -213,39 +207,39 @@
         
         .cta-microcopy {
             font-family: 'Poppins', sans-serif;
-            font-size: 0.8rem; /* Reduced font size for compactness */
+            font-size: 0.8rem;
             color: #6B7280;
-            margin-top: 8px; /* Reduced margin */
+            margin-top: 8px;
             font-weight: 500;
             text-align: center;
         }
         
         /* Footer Section */
         .footer {
-            padding: 15px 0 15px; /* Reduced padding */
+            padding: 15px 0 15px;
             text-align: center;
-            margin-top: 15px; /* Reduced margin */
-            background: #FFFFFB; /* Consistent background color */
+            margin-top: 15px;
+            background: #FFFFFB;
         }
 
         .footer hr {
             width: 80%;
             border: none;
             border-top: 1px solid #ddd;
-            margin: 10px auto; /* Reduced margin */
+            margin: 10px auto;
         }
 
         .huge-tip {
             font-family: 'Canva Sans', sans-serif;
-            font-size: 0.9rem; /* Reduced font size for compactness */
+            font-size: 0.9rem;
             font-weight: bold;
-            color: #35005F; /* Updated color for HUGE TIP */
-            margin-bottom: 10px; /* Reduced margin */
+            color: #35005F;
+            margin-bottom: 10px;
         }
         
         .footer-text { 
             font-family: 'Poppins', sans-serif;
-            font-size: 0.75rem; /* Reduced font size */
+            font-size: 0.75rem;
             color: #9CA3AF;
             font-weight: 600;
             margin-bottom: 5px; 
@@ -253,10 +247,10 @@
         
         .geo-restriction {
             font-family: 'Poppins', sans-serif;
-            font-size: 0.7rem; /* Reduced font size */
+            font-size: 0.7rem;
             color: #6B7280;
             font-weight: 500;
-            margin-bottom: 8px; /* Reduced margin */
+            margin-bottom: 8px;
             line-height: 1.3;
             max-width: 280px;
             margin-left: auto;
@@ -267,13 +261,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px; /* Reduced gap */
+            gap: 10px;
             flex-wrap: wrap;
         }
         
         .legal-link {
             font-family: 'Poppins', sans-serif;
-            font-size: 0.7rem; /* Reduced font size */
+            font-size: 0.7rem;
             color: #9CA3AF;
             text-decoration: none;
             transition: color 0.2s ease;
@@ -288,7 +282,7 @@
             font-size: 0.7rem;
         }
         
-        /* Responsive Design Adjustments (further fine-tuning for very small screens) */
+        /* Responsive Design Adjustments */
         @media (max-width: 320px) {
             .hero-title { font-size: 1.6rem; margin-bottom: 5px; }
             .section-title { font-size: 1.3rem; margin-top: 5px; margin-bottom: 10px; }
@@ -299,7 +293,7 @@
             .cta-button { font-size: 1.2rem; padding: 10px 18px; max-width: 280px; }
             .cta-microcopy { font-size: 0.75rem; }
             .huge-tip { font-size: 0.8rem; }
-            .app-logo { max-width: 140px; }
+            .top-section { height: 140px; } /* Smaller height for very small screens */
         }
 
         @media (min-width: 375px) {
@@ -312,7 +306,7 @@
             .cta-button { font-size: 1.4rem; padding: 14px 22px; max-width: 340px; }
             .cta-microcopy { font-size: 0.85rem; }
             .huge-tip { font-size: 0.95rem; }
-            .app-logo { max-width: 180px; }
+            .top-section { height: 160px; }
         }
         
         @media (min-width: 414px) {
@@ -325,11 +319,11 @@
             .cta-button { font-size: 1.5rem; padding: 16px 25px; max-width: 380px; }
             .cta-microcopy { font-size: 0.9rem; }
             .huge-tip { font-size: 1rem; }
-            .app-logo { max-width: 200px; }
+            .top-section { height: 180px; }
         }
         
         /* Performance Optimizations */
-        .step, .cta-button, .app-logo {
+        .step, .cta-button {
             will-change: transform, box-shadow;
         }
         
@@ -356,7 +350,7 @@
 </head>
 <body>
     <div class="top-section">
-        <img src="4Playfullogo.png" alt="Playful App Logo" class="app-logo"> </div>
+        </div>
 
     <div class="main-content">
         <h1 class="hero-title">START PLAYING, START EARNING!</h1>
@@ -391,7 +385,7 @@
 
     <section class="cta-section">
         <h2 class="cta-message">Click below to start earning👇</h2>
-        <a href="https://rewarduplevel.com/aff_c?offer_id=1337&aff_id=27696&source=98-my-reaction-playful1337-bc716" class="cta-button" role="button" aria-label="Start earning now">
+        <a href="https://rewarduplevel.com/aff_c?offer_id=1337&aff_id=27696&source=97-fat-bags-playful1337-bc716" class="cta-button" role="button" aria-label="Start earning now">
             START EARNING NOW!
         </a>
         <p class="cta-microcopy">Takes less than 60 seconds to start.</p>
