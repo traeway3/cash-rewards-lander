@@ -63,7 +63,7 @@
       font-weight: bold;
     }
     .cta-btn {
-      display: none;
+      display: block;
       width: 90%;
       margin: 5px auto;
       background: #DB1C15;
@@ -79,28 +79,9 @@
     .cta-btn:hover {
       background: #a81310;
     }
-    .location-section {
-      margin-top: 5px;
-    }
-    .location-btn {
-      display: block;
-      width: 90%;
-      margin: 5px auto;
-      background: #DB1C15;
-      color: #FFFFFF;
-      font-size: 22px;
-      font-weight: bold;
-      padding: 14px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .location-btn:hover {
-      background: #a81310;
-    }
+    /* The .location-section styles are no longer needed */
     .thank-you {
-      display: none;
+      display: block;
       margin-top: 5px;
       animation: fadeIn 0.5s ease-in-out;
     }
@@ -123,18 +104,6 @@
       margin: 20px auto 10px auto;
     }
   </style>
-  <script>
-    function showThankYou() {
-      document.querySelector('.location-section').style.display = 'none';
-      document.querySelector('.thank-you').style.display = 'block';
-      document.querySelector('.cta-btn').style.display = 'block';
-
-      const firstStep = document.querySelectorAll('.steps ol li')[0];
-      if (firstStep) {
-        firstStep.textContent = 'Download the Testerup app';
-      }
-    }
-  </script>
 </head>
 <body>
   <div class="top-section">
@@ -146,15 +115,10 @@
 
     <div class="steps">
       <ol>
-        <li>Choose A Region Below📍</li>
+        <li>Download the Testerup app</li>
         <li>Sign Up and Play 3-5 Games to Start<br>Earning <span style="color:#DB1C15;">(IMPORTANT)</span>🚨</li>
         <li>Cash out and Repeat💸</li>
       </ol>
-    </div>
-
-    <div class="location-section">
-      <button class="location-btn" onclick="showThankYou()">United States</button>
-      <button class="location-btn" onclick="showThankYou()">Canada</button>
     </div>
 
     <div class="thank-you">
